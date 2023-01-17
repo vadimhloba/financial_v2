@@ -187,37 +187,37 @@
 		<section class="industries-helped">
 			<div class="container">
 				<div class="col-one">
-					<h1></h1>
+					<h1>Industries we've helped</h1>
 				</div>
 				<div class="col-two">
 					<div class="row-one">
-						<h2></h2>
-						<button></button>
+						<h2 class="regular desc">We've helped clients of all sizes and across multiple different industries</h2>
+						<button>Check eligibility</button>
 					</div>
 					<div class="row-two">
 						<div>
-							<h3></h3>
-							<p></p>
+							<h2 class="regular">Construction</h2>
+							<h2 class="regular number">1</h2>
 						</div>
 						<div>
-							<h3></h3>
-							<p></p>
+							<h2 class="regular">Restaurants / QSR</h2>
+							<h2 class="regular number">2</h2>
 						</div>
 						<div>
-							<h3></h3>
-							<p></p>
+							<h2 class="regular">Warehouse / 3PL</h2>
+							<h2 class="regular number">3</h2>
 						</div>
 						<div>
-							<h3></h3>
-							<p></p>
+							<h2 class="regular">Business Services</h2>
+							<h2 class="regular number">4</h2>
 						</div>
 						<div>
-							<h3></h3>
-							<p></p>
+							<h2 class="regular">Retail</h2>
+							<h2 class="regular number">5</h2>
 						</div>
 						<div>
-							<h3></h3>
-							<p></p>
+							<h2 class="regular">Mechanical Supplies</h2>
+							<h2 class="regular number">6</h2>
 						</div>
 					</div>
 				</div>
@@ -226,58 +226,105 @@
 
 		<section class="how-it-works">
 			<div class="container">
-
+				<h1>How it works</h1>
+				<div class="column">
+					<div class="item item-a">
+						<div class="wrapper">
+							<h2>01</h2>
+							<p>Qualification Quiz</p>
+						</div>
+						<p class="medium item-desc">A boss who admits to having acted in their own interest may show honesty by rectifying the situation</p>
+					</div>
+					<div class="item item-b">
+						<div class="wrapper">
+							<h2>02</h2>
+							<p>Fill Out Application</p>
+						</div>
+						<p class="medium item-desc">Online or phone</p>
+					</div>
+					<div class="item item-c">
+						<div class="wrapper">
+							<h2>03</h2>
+							<p>Get Docs and Info</p>
+						</div>
+						<p class="medium item-desc">Work with our team</p>
+					</div>
+					<div class="item item-d">
+						<div class="wrapper">
+							<h2>04</h2>
+							<p>Processing</p>
+						</div>
+						<p class="medium item-desc">A boss who admits to having acted in their own interest may show honesty by rectifying the situation</p>
+					</div>
+					<div class="item item-e">
+						<div class="wrapper">
+							<h2>05</h2>
+							<p>Submission</p>
+						</div>
+						<p class="medium item-desc">Online or phone</p>
+					</div>
+					<div class="item item-f">
+						<div class="wrapper">
+							<h2>06</h2>
+							<p>Payment from IRS</p>
+						</div>
+						<p class="medium item-desc">Work with our team</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<section class="get-cash">
 			<div class="container">
 				<div class="col-one">
-					<p></p>
-					<h1></h1>
-					<button></button>
+					<h3>Most business owners don't realize they can qualify to</h3>
+					<h1>Get $26,000 cash <br> for each W2 employee</h1>
+					<button>Check eligibility</button>
+				</div>
+				<div class="col-two">
+					<div class="row-one">
+						<h2 class="regular">Using the IRS' ERC Program</h2>
+					</div>
+					<div class="row-two">
+						<div>
+							<h2>No risk</h2>
+							<ul>
+								<li class="medium">No up front fees</li>
+								<li class="medium">No credit Check</li>
+								<li class="medium">Not a loan</li>
+							</ul>
+						</div>
+						<div>
+							<h2>Qualify 1 of 3 ways</h2>
+							<ul>
+								<li class="medium">Revenue Reduction</li>
+								<li class="medium">Shutdowns</li>
+								<li class="medium">Supply Chain Disruptions</li>
+							</ul>
+						</div>
+						<div>
+							<h2>Get money</h2>
+							<p class="medium">from the IRS, even If you got PPP</p>
+						</div>
+						<div>
+							<h2>Get $1.3 million</h2>
+							<p class="medium">No cap on refund. Ie. a 50 employee business can get $1.3 Million</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<col-two>
-				<div class="row-one">
-					<h2></h2>
-				</div>
-				<div class="row-two">
-					<div>
-						<h2></h2>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</div>
-					<div>
-						<h2></h2>
-						<p></p>
-					</div>
-				</div>
-				<div class="row-three">
-					<div>
-						<h2></h2>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</div>
-					<div>
-						<h2></h2>
-						<p></p>
-					</div>
-				</div>
-			</col-two>
 		</section>
 
 		<section class="client-review">
 			<div class="container">
 				<div class="col-one">
-					<h1></h1>
-					<a href="#"></a>
+					<h1>Client review</h1>
+					<div>
+						<a href="#">Next review</a>
+						<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#DC5750"/>
+						</svg>
+					</div>
 				</div>
 				<div class="col-two">
 
@@ -287,14 +334,75 @@
 
 		<section class="faq">
 			<div class="container">
+				<h1>Frequently Asked Questions</h1>
 				<div class="col-one">
-					<img src="">
+					<img src="~/static/img/background/faq.png">
 				</div>
 				<div class="col-two">
-					<a href="#"></a>
-					<a href="#"></a>
-					<div class="tab-appear"></div>
-					<div class="tab-appear"></div>
+					<a href="#">Qualification</a>
+					<a href="#">Tax Credit</a>
+					<div class="tab-appear qual">
+						<div>
+							<p>Can I qualify if I'm a 1099 contractor?</p>
+							<p class="medium">Unfortunately no. This program is only for companies who paid W2 wages to non-owners</p>
+							<li class="minus"></li>
+						</div>
+						<div>
+							<p>Can I qualify if I don't have any W2 employees?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>Can I qualify for ERC when I got a PPP loan?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>What if my revenue went up in 2020 or 2021? Can I still qualify?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>How long is the ERC program open for?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>What if I have bad credit? Is there a credit check involved?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>Can I qualify for ERC if my business is now closed</p>
+							<li class="plus"></li>
+						</div>
+					</div>
+					<div class="tab-appear tax">
+						<div>
+							<p>Can I qualify if I'm a 1099 contractor?</p>
+							<p class="medium">Unfortunately no. This program is only for companies who paid W2 wages to non-owners</p>
+							<li class="minus"></li>
+						</div>
+						<div>
+							<p>Can I qualify if I don't have any W2 employees?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>Can I qualify for ERC when I got a PPP loan?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>What if my revenue went up in 2020 or 2021? Can I still qualify?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>How long is the ERC program open for?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>What if I have bad credit? Is there a credit check involved?</p>
+							<li class="plus"></li>
+						</div>
+						<div>
+							<p>Can I qualify for ERC if my business is now closed</p>
+							<li class="plus"></li>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -302,35 +410,35 @@
 		<footer>
 			<div class="container">
 				<div class="col-one">
-					<h1></h1>
+					<h1>How to contact us?</h1>
 				</div>
 				<div class="col-two">
 					<div class="row-one">
-						<p></p>
-						<h2></h2>
+						<p>call us</p>
+						<h2>(855) 855-9365</h2>
 					</div>
 					<div class="row-one">
-						<p></p>
-						<h2></h2>
+						<p>write to us</p>
+						<h2>financialmatch@gmail.comFacebook</h2>
 					</div>
 					<div class="row-one">
 						<div>
-							<p></p>
-							<img src="">
+							<p>Facebook</p>
+							<img src="~/static/img/icons/facebook-icon.svg">
 						</div>
 						<div>
-							<p></p>
-							<img src="">
+							<p>LinkedIn</p>
+							<img src="~/static/img/icons/linkedin-icon.svg">
 						</div>
 					</div>
 				</div>
 				<div class="col-three">
 					<div class="row-one">
-						<p></p>
+						<p>© Financial Match 2022 All rights reserved.</p>
 					</div>
 					<div class="row-two">
-						<a href="#"></a>
-						<a href="#"></a>
+						<a href="#">Terms and Conditions</a>
+						<a href="#">Privacy policy</a>
 					</div>
 				</div>
 			</div>
@@ -530,6 +638,7 @@ export default {
 			}
 			.item-a {
 				grid-row: 2;
+				border-radius: 10px 0px 0px 10px;
 			}
 			.item-b {
 				grid-row: 3;
@@ -545,6 +654,7 @@ export default {
 			}
 			.item-e {
 				grid-column: 4;
+				border-radius: 0px 10px 10px 0px;
 			}
 			h2, p.desc-title {
 				color: var(--blue);
@@ -591,6 +701,142 @@ export default {
 					& p:last-child {
 						margin-bottom: 8px;
 					}
+				}
+			}
+		}
+	}
+	.industries-helped {
+		padding: 160px 0 185px;
+		.col-one {
+			border-bottom: 2px solid var(--grayish);
+			h1 {
+				max-width: 349px;
+				width: 100%;
+				margin-bottom: 32px;
+			}
+		}
+		.col-two {
+			margin-top: 22px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			h2 {
+				&.desc {
+					margin-bottom: 32px;
+					max-width: 344px;
+					width: 100%;
+				}
+				&.desc, &.number {
+					color: var(--gray);
+				}
+				&.number {
+					margin: 24px 0;
+					&:first-child{
+						margin-top: 0;
+					}
+				}
+			}
+			button {
+				background-color: var(--lightgreen);
+				color: var(--white);
+			}
+			.row-two {
+				div {
+					display: flex;
+					justify-content: space-between;
+					border-bottom: 2px solid var(--grayish);
+					align-items: center;
+				}
+			}
+		}
+	}
+	.how-it-works {
+		padding-bottom: 160px;
+		background-color: var(--green);
+		.container {
+			padding: 160px 0;
+		}
+		h1, h2, p {
+			color: var(--white);
+		}
+		h1 {
+			margin-bottom: 32px;
+		}
+		.column {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			.item {
+				padding: 24px;
+				max-width: 346px;
+				border: 2px solid var(--lightgreen);
+				margin: -1px;
+				&:nth-child(2) .wrapper, &:nth-child(3) .wrapper,
+				&:nth-child(5) .wrapper, &:nth-child(6) .wrapper {
+						margin-bottom: 130px;
+				}
+				.wrapper {
+					display: flex;
+					align-items: center;
+					margin-bottom: 64px;
+					h2 {
+						margin-right: 24px;
+					}
+				}
+				.item-desc {
+					max-width: 233px;
+					width: 100%;
+					margin-left: auto;
+				}
+				&.item-a {
+					grid-column: 2;
+				}
+				&.item-c {
+					border-radius: 0px 10px 10px 0px;
+				}
+				&.item-d {
+					border-radius: 10px 0px 0px 10px;
+				}
+			}
+		}
+	}
+	.get-cash {
+		padding: 160px 0;
+		.col-one {
+			border-bottom: 2px solid var(--grayish);
+			h3 {
+				color: var(--gray);
+			}
+			h1 {
+				max-width: 594px;
+				width: 100%;
+				margin: 8px 0 32px;
+			}
+			button {
+				background-color: var(--lightgreen);
+				color: var(--white);
+				margin-bottom: 38px;
+			}
+		}
+		.col-two {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			margin-top: 40px;
+			.row-one {
+				h2 {
+					color: var(--gray);
+					max-width: 282px;
+					width: 100%;
+				}
+			}
+			.row-two {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-column-gap: 32px;
+				grid-row-gap: 34px;
+				h2 {
+					margin-bottom: 8px;
+				}
+				ul {
+					padding-inline-start: 19px;
 				}
 			}
 		}

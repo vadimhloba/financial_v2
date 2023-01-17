@@ -7,7 +7,7 @@
 	--lightgreen: #41A280;
 	--red: #DC5750;
 	--yelow: #F4DE82;
-	--darkgreen: #30785D;
+	--green: #30785D;
 	--whitish: #F4EFE5;
 	--grayish: #D5D4D4;
 	--gray: #797B87;
@@ -22,6 +22,8 @@ html, body {
 	line-height: 140%;
 	background: var(--whitish);
 	color: var(--black);
+	margin: 0;
+	padding: 0;
 }
 
 .container {
@@ -99,13 +101,13 @@ h3 {
 	}
 }
 
-p, a {
+p, a, li {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 140%;
 }
 
-p, a {
+p, a, li {
 	&.medium {
 		font-weight: 400;
 		font-size: 16px;

@@ -26,6 +26,14 @@ html, body {
 	padding: 0;
 }
 
+body {
+	overflow-y: auto;
+}
+
+section {
+	width: 100%;
+}
+
 img, svg{
   display: block;
   max-width: 100%;
@@ -70,7 +78,7 @@ h1 {
 	line-height: 130%;
 }
 
-h2 {
+h2, span {
 	font-weight: 600;
 	font-size: 32px;
 	line-height: 130%;
@@ -104,18 +112,6 @@ p, a, li {
   line-height: 140%;
 }
 
-button {
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 140%;
-	width: 186px;
-	padding: 16px 32px 13px;
-	border: none;
-	background: var(--white);
-	border-radius: 8px;
-	cursor: pointer;
-}
-
 a {
 	cursor: pointer;
 	text-decoration: none;
@@ -128,7 +124,118 @@ img {
 }
 
 /* --------------------
-    START WTF ???
+    START button
+-------------------- */
+button {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 186px;
+	padding: 16px 0 13px;
+	border: none;
+	background: var(--white);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: .4s;
+	&:enabled {
+		border: 2px solid var(--lightgreen);
+		color: var(--lightgreen);
+	}
+	&:hover {
+		border: 2px solid var(--green);
+		color: var(--green);
+	}
+	&:focus {
+		border: 4px solid var(--green);
+		color: var(--green);
+	}
+	&:active {
+		border: 2px solid var(--lightgreen);
+		color: var(--lightgreen);
+	}
+	&.green {
+		background-color: var(--lightgreen);
+		color: var(--white);
+		&:enabled {
+			background-color: var(--lightgreen);
+		}
+		&:hover {
+			background-color: var(--green);
+		}
+		&:focus {
+			border: 2px solid var(--black);
+			background-color: var(--lightgreen);
+		}
+		&:active {
+			background-color: var(--lightgreen);
+		}
+		&:disabled {
+			opacity: 0.5;
+		}
+	}
+}
+/* --------------------
+    END button
+-------------------- */
+
+/* ------------------------
+    START link "read-more"
+--------------------------- */
+.read-more {
+	display: flex;
+	svg {
+		margin-left: 4px;
+		transition: .2s;
+	}
+	&:enabled {
+		p {
+			color: var(--lightgreen);
+		}
+		svg path {
+			fill: var(--lightgreen);
+		}
+	}
+	&:hover {
+		p {
+			color: var(--green);
+		}
+		svg {
+			transform: rotate(45deg);
+			path {
+				fill: var(--green);
+			}
+		}
+	}
+	&:focus {
+		p {
+			text-decoration-line: underline;
+			text-decoration-color: var(--green);
+		}
+		svg {
+			transform: rotate(45deg);
+			path {
+				fill: var(--green);
+			}
+		}
+	}
+	&:active {
+		p {
+			color: var(--lightgreen);
+		}
+		svg {
+			transform: rotate(45deg);
+			path {
+				fill: var(--lightgreen);
+			}
+		}
+	}
+}
+/* ------------------------
+    END link "read-more"
+--------------------------- */
+
+/* --------------------
+    START input
 -------------------- */
 input[type=range] {
   width: 100%;
@@ -200,5 +307,5 @@ input[type=range]:focus::-ms-fill-upper {
 	background: #FAFAFA;
 }
 /* --------------------
-    END WTF ???
+    END input
 -------------------- */

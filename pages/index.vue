@@ -51,8 +51,8 @@
 								entire being originating from cells in particular, on our
 								chromosomes and mitochondrial DNA.</p>
 							<div class="links">
-								<a class="medium link">Read More</a>
-								<a>
+								<a class="link read-more">
+									<p class="medium">Read More</p>
 									<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 									</svg>
@@ -157,7 +157,7 @@
 								<p>20</p>
 							</div>
 							<input type="range">
-							<h1>$312,000</h1>
+							<h1><span class="regular">$</span>312,000</h1>
 						</div>
 					</div>
 				</div>
@@ -173,7 +173,7 @@
 				<div class="col-two">
 					<div class="row-one">
 						<h2 class="regular desc">We've helped clients of all sizes and across multiple different industries</h2>
-						<button>Check eligibility</button>
+						<button class="green">Check eligibility</button>
 					</div>
 					<div class="row-two">
 						<div>
@@ -261,8 +261,8 @@
 			<div class="container">
 				<div class="col-one">
 					<h3>Most business owners don't realize they can qualify to</h3>
-					<h1>Get $26,000 cash <br> for each W2 employee</h1>
-					<button>Check eligibility</button>
+					<h1>Get <span class="regular">$</span>26,000 cash <br> for each W2 employee</h1>
+					<button class="green">Check eligibility</button>
 				</div>
 				<div class="col-two">
 					<div class="row-one">
@@ -324,8 +324,7 @@
 							<h3>Selena Giri</h3>
 							<p class="medium">CEO Chess.com</p>
 							<div>
-								<h2 class="regular">$</h2>
-								<h1>200,500</h1>
+								<h1><span class="regular">$</span>200,500</h1>
 							</div>
 							<p class="mediium">received to our clients</p>
 							<div>
@@ -545,8 +544,8 @@ export default {
 		.bg-img {
 			padding: 32px;
 			background: no-repeat url(/img/background/bg_bus-imp.png);
-			min-width: 1376px;
-			min-height: 542px;
+			max-width: 1376px;
+			width: 100%;
 		}
 		.column {
 			display: flex;
@@ -747,6 +746,9 @@ export default {
 			width: 100%;
 			.wrap {
 				height: auto;
+				span {
+					margin-right: 8px;
+				}
 				input {
 					margin-bottom: 14px;
 				}
@@ -790,10 +792,6 @@ export default {
 						margin-top: 0;
 					}
 				}
-			}
-			button {
-				background-color: var(--lightgreen);
-				color: var(--white);
 			}
 			.row-two {
 				div {
@@ -867,8 +865,6 @@ export default {
 				margin: 8px 0 32px;
 			}
 			button {
-				background-color: var(--lightgreen);
-				color: var(--white);
 				margin-bottom: 38px;
 			}
 		}
@@ -947,15 +943,15 @@ export default {
 					padding: 32px 63px 31px 32px;
 					div {
 						display: flex;
-						align-items: flex-end;
+						align-items: end;
+						span {
+							margin-right: 8px;
+						}
 						h2 {
 							margin-bottom: 8px;
 						}
 						& h2:last-child {
 							margin-left: 10px;
-						}
-						& h2:first-child {
-							margin-right: 10px;
 						}
 					}
 				}

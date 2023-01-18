@@ -51,14 +51,12 @@
 								entire being originating from cells in particular, on our
 								chromosomes and mitochondrial DNA.</p>
 							<div class="links">
-								<div>
-									<a class="medium link">Read More</a>
-									<a>
-										<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
-										</svg>
-									</a>
-								</div>
+								<a class="medium link">Read More</a>
+								<a>
+									<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
+									</svg>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -307,43 +305,55 @@
 					<h1>Client review</h1>
 					<div class="link">
 						<div>
-							<a href="#">Next review</a>
-							<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<a href="#" class="medium">Next review</a>
+							<a href="#"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#DC5750"/>
-							</svg>
+							</svg></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-two">
 					<div class="row-one">
 						<div class="video">
-							<img src="~/static/img/reviews/review-one.png">
+							<img src="/img/reviews/review-one.png">
 							<a><svg width="49" height="58" viewBox="0 0 49 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M46.1043 33.3565L8.18522 56.4315C4.9672 58.3877 0.837402 56.019 0.837402 52.0752V5.92522C0.837402 1.98772 4.96124 -0.387279 8.18522 1.57522L46.1043 24.6502C46.8363 25.0885 47.4448 25.722 47.868 26.4865C48.2912 27.251 48.5142 28.1193 48.5142 29.0033C48.5142 29.8874 48.2912 30.7557 47.868 31.5202C47.4448 32.2847 46.8363 32.9182 46.1043 33.3565Z" fill="#FAFAFA"/>
 								</svg></a>
 						</div>
 						<div class="video-desc">
 							<h3>Selena Giri</h3>
-							<p>CEO Chess.com</p>
-							<h2 class="regular">$ 200,500</h2>
+							<p class="medium">CEO Chess.com</p>
+							<div>
+								<h2 class="regular">$</h2>
+								<h1>200,500</h1>
+							</div>
 							<p class="mediium">received to our clients</p>
-							<h1>4 months</h1>
+							<div>
+								<h1>4</h1>
+								<h2 class="regular">months</h2>
+							</div>
 							<p class="medium">from call to receiving money</p>
 						</div>
 					</div>
 					<div class="row-two">
 						<div class="video">
-							<img>
+							<img src="/img/reviews/review-two.png">
 							<a><svg width="49" height="58" viewBox="0 0 49 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M46.1043 33.3565L8.18522 56.4315C4.9672 58.3877 0.837402 56.019 0.837402 52.0752V5.92522C0.837402 1.98772 4.96124 -0.387279 8.18522 1.57522L46.1043 24.6502C46.8363 25.0885 47.4448 25.722 47.868 26.4865C48.2912 27.251 48.5142 28.1193 48.5142 29.0033C48.5142 29.8874 48.2912 30.7557 47.868 31.5202C47.4448 32.2847 46.8363 32.9182 46.1043 33.3565Z" fill="#FAFAFA"/>
 								</svg></a>
 						</div>
 						<div class="video-desc">
 							<h3>Tom Hardy</h3>
-							<p>CEO Chess.com</p>
-							<h2 class="regular">$ 200,500</h2>
+							<p class="medium">CEO Chess.com</p>
+							<div>
+								<h2 class="regular">$</h2>
+								<h1>200,500</h1>
+							</div>
 							<p class="mediium">received to our clients</p>
-							<h1>4 months</h1>
+							<div>
+								<h1>4</h1>
+								<h2 class="regular">months</h2>
+							</div>
 							<p class="medium">from call to receiving money</p>
 						</div>
 					</div>
@@ -356,72 +366,158 @@
 		<section class="faq">
 			<div class="container">
 				<h1>Frequently Asked Questions</h1>
-				<div class="col-one">
+				<div class="column">
 					<img src="/img/background/faq.png">
-				</div>
-				<div class="col-two">
-					<a href="#">Qualification</a>
-					<a href="#">Tax Credit</a>
-					<div class="tab-appear qual">
-						<div>
-							<p>Can I qualify if I'm a 1099 contractor?</p>
-							<p class="medium">Unfortunately no. This program is only for companies who paid W2 wages to non-owners</p>
-							<li class="minus"></li>
+					<div class="col-desc">
+						<div class="links">
+							<a href="#">Qualification</a>
+							<a href="#">Tax Credit</a>
 						</div>
-						<div>
-							<p>Can I qualify if I don't have any W2 employees?</p>
-							<li class="plus"></li>
+						<div class="tab-appear qual">
+							<div class="post">
+								<div>
+									<h3>Can I qualify if I'm a 1099 contractor?</h3>
+									<p class="medium">Unfortunately no. This program is only for companies who paid W2 wages to non-owners</p>
+								</div>
+								<div>
+									<a href="#"><svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.25031 2.84V0.9H0.310313V2.84H9.25031Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>Can I qualify if I don't have any W2 employees?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>Can I qualify for ERC when I got a PPP loan?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>What if my revenue went up in 2020 or 2021? Can I still qualify?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>How long is the ERC program open for?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>What if I have bad credit? Is there a credit check involved?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>Can I qualify for ERC if my business is now closed</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
 						</div>
-						<div>
-							<p>Can I qualify for ERC when I got a PPP loan?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>What if my revenue went up in 2020 or 2021? Can I still qualify?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>How long is the ERC program open for?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>What if I have bad credit? Is there a credit check involved?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>Can I qualify for ERC if my business is now closed</p>
-							<li class="plus"></li>
-						</div>
-					</div>
-					<div class="tab-appear tax">
-						<div>
-							<p>Can I qualify if I'm a 1099 contractor?</p>
-							<p class="medium">Unfortunately no. This program is only for companies who paid W2 wages to non-owners</p>
-							<li class="minus"></li>
-						</div>
-						<div>
-							<p>Can I qualify if I don't have any W2 employees?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>Can I qualify for ERC when I got a PPP loan?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>What if my revenue went up in 2020 or 2021? Can I still qualify?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>How long is the ERC program open for?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>What if I have bad credit? Is there a credit check involved?</p>
-							<li class="plus"></li>
-						</div>
-						<div>
-							<p>Can I qualify for ERC if my business is now closed</p>
-							<li class="plus"></li>
+						<div class="tab-appear tax">
+							<div class="post">
+								<div>
+									<h3>Can I qualify if I'm a 1099 contractor?</h3>
+									<p class="medium">Unfortunately no. This program is only for companies who paid W2 wages to non-owners</p>
+								</div>
+								<div>
+									<a href="#"><svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.25031 2.84V0.9H0.310313V2.84H9.25031Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>Can I qualify if I don't have any W2 employees?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<p>Can I qualify for ERC when I got a PPP loan?</p>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>What if my revenue went up in 2020 or 2021? Can I still qualify?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>How long is the ERC program open for?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>What if I have bad credit? Is there a credit check involved?</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
+							<div class="post">
+								<div>
+									<h3>Can I qualify for ERC if my business is now closed</h3>
+								</div>
+								<div>
+									<a href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.37422 9.6V5.84H10.2542V3.9H6.37422V0.0999997H4.21422V3.9H0.314219V5.84H4.21422V9.6H6.37422Z" fill="#797B87"/>
+									</svg></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -518,6 +614,8 @@ export default {
 				margin-right: 32px;
 				.links {
 					margin-top: 32px;
+					display: flex;
+					align-items: center;
 					.link {
 						margin-right: 4px;
 					}
@@ -812,11 +910,93 @@ export default {
 				justify-content: end;
 				& div {
 					grid-column: 2;
+					display: flex;
+					align-items: center;
+					a {
+						color: var(--red);
+						margin-right: 4px;
+					}
 				}
 			}
 		}
 		.col-two {
-
+			display: flex;
+			overflow-x: auto;
+			.row-one, .row-two {
+				min-width: 1000px;
+				display: flex;
+				overflow: hidden;
+				border-radius: 10px;
+				margin-right: 32px;
+				.video {
+					position: relative;
+					a {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+					img {
+						min-width: 656px;
+						width: 100%;
+						min-height: 332px;
+					}
+				}
+				.video-desc {
+					color: var(--white);
+					padding: 32px 63px 31px 32px;
+					div {
+						display: flex;
+						align-items: flex-end;
+						h2 {
+							margin-bottom: 8px;
+						}
+						& h2:last-child {
+							margin-left: 10px;
+						}
+						& h2:first-child {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+			.row-one {background: var(--red);}
+			.row-two{background: var(--blue);}
+		}
+	}
+	.faq {
+		padding-bottom: 160px;
+		h1 {
+			margin-bottom: 32px;
+		}
+		.column {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			.col-desc {
+				.links {
+					margin-bottom: 32px;
+					& a:first-child {
+						margin-right: 48px;
+					}
+				}
+				.tab-appear {
+					.post {
+						border-top: 2px solid var(--grayish);
+						padding: 24px 0;
+						display: flex;
+						align-items: center;
+						svg {
+							margin-left: 15px;
+						}
+						p {
+							margin-top: 8px;
+						}
+					}
+				}
+				.tax {
+					display: none;
+				}
+			}
 		}
 	}
 }

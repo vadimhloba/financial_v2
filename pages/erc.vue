@@ -1,13 +1,3 @@
 <template>
-
+  <div>erc</div>
 </template>
-
-<script>
-export default {
-  name: 'ErcPage'
-}
-</script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -26,34 +26,31 @@ html, body {
 	padding: 0;
 }
 
+img, svg{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px;
-}
-@media (min-width: 576px) {
-  .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (min-width: 576px) {
     width: 540px;
   }
-}
-@media(min-width:768px) {
-  .container {
+  @media(min-width:768px) {
     width: 760px;
   }
-}
-@media(min-width:992px) {
-  .container {
+  @media(min-width:992px) {
     width: 990px;
   }
-}
-@media(min-width:1200px) {
-  .container {
+  @media(min-width:1200px) {
     width: 1180px;
   }
-}
-@media(min-width:1440px) {
-  .container {
+  @media(min-width:1440px) {
     width: 1367px;
   }
 }
@@ -77,9 +74,6 @@ h2 {
 	font-weight: 600;
 	font-size: 32px;
 	line-height: 130%;
-}
-
-h2 {
 	&.regular {
 		font-weight: 400;
 		font-size: 32px;
@@ -91,9 +85,6 @@ h3 {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 140%;
-}
-
-h3 {
 	&.regular {
 		font-weight: 400;
 		font-size: 20px;
@@ -107,12 +98,10 @@ p, a, li {
 	line-height: 140%;
 }
 
-p, a, li {
-	&.medium {
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 140%;
-	}
+.medium {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
 }
 
 button {
@@ -136,6 +125,9 @@ img {
 	height: auto;
 }
 
+/* --------------------
+    START WTF ???
+-------------------- */
 input[type=range] {
   width: 100%;
   margin: 12.5px 0;
@@ -205,3 +197,6 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
 	background: #FAFAFA;
 }
+/* --------------------
+    END WTF ???
+-------------------- */

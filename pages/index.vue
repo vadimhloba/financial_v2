@@ -19,15 +19,15 @@
 			<div class="container">
 				<h1>Saying about us</h1>
 				<div class="wrapper">
-					<div><img src="~/static/img/company_logos/bloomberg_comp.png"></div>
-					<div><img src="~/static/img/company_logos/yahoo_comp.png"></div>
-					<div class="item-a"><img src="~/static/img/company_logos/usa-today_comp.png"></div>
-					<div class="item-b"><img src="~/static/img/company_logos/chicago-tribune_comp.png"></div>
-					<div><img src="~/static/img/company_logos/la-tribune_comp.png"></div>
-					<div><img src="~/static/img/company_logos/yahoo-finance_comp.png"></div>
-					<div><img src="~/static/img/company_logos/ceo-weekly_comp.png"></div>
-					<div class="item-c"><img src="~/static/img/company_logos/business-first_comp.png"></div>
-					<div><img src="~/static/img/company_logos/disrupt_comp.png"></div>
+					<div><img src="/img/company_logos/bloomberg_comp.png"></div>
+					<div><img src="/img/company_logos/yahoo_comp.png"></div>
+					<div class="item-a"><img src="/img/company_logos/usa-today_comp.png"></div>
+					<div class="item-b"><img src="/img/company_logos/chicago-tribune_comp.png"></div>
+					<div><img src="/img/company_logos/la-tribune_comp.png"></div>
+					<div><img src="/img/company_logos/yahoo-finance_comp.png"></div>
+					<div><img src="/img/company_logos/ceo-weekly_comp.png"></div>
+					<div class="item-c"><img src="/img/company_logos/business-first_comp.png"></div>
+					<div><img src="/img/company_logos/disrupt_comp.png"></div>
 				</div>
 			</div>
 		</section>
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 				<div class="col-three">
-					<img src="~/static/img/vector-img/office.png">
+					<img src="/img/vector-img/office.png">
 				</div>
 			</div>
 		</section>
@@ -324,7 +324,7 @@
 			<div class="container">
 				<h1>Frequently Asked Questions</h1>
 				<div class="col-one">
-					<img src="~/static/img/background/faq.png">
+					<img src="/img/background/faq.png">
 				</div>
 				<div class="col-two">
 					<a href="#">Qualification</a>
@@ -415,7 +415,7 @@ export default {
 		}
 		.bg-img {
 			padding: 32px;
-			background: no-repeat url(~/static/img/background/bg_bus-imp.png);
+			background: no-repeat url(/img/background/bg_bus-imp.png);
 			min-width: 1376px;
 			min-height: 542px;
 		}
@@ -594,7 +594,7 @@ export default {
 	.erc-payout {
 		margin-top: 160px;
 		.wrapper {
-			background: no-repeat url(~/static/img/background/payout.png);
+			background: no-repeat url(/img/background/payout.png);
 			padding: 32px;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);

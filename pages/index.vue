@@ -51,7 +51,7 @@
 								entire being originating from cells in particular, on our
 								chromosomes and mitochondrial DNA.</p>
 							<div class="links">
-								<a class="link read-more">
+								<a href="#" class="read-more">
 									<p class="medium">Read More</p>
 									<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
@@ -148,7 +148,7 @@
 				<div class="wrapper">
 					<div class="desc">
 						<h1 class="title">Estimate your ERC Payout</h1>
-						<button>Check eligibility</button>
+						<button class="red">Check eligibility</button>
 					</div>
 					<div class="pay-cost">
 						<div class="wrap">
@@ -305,10 +305,11 @@
 					<h1>Client review</h1>
 					<div class="link">
 						<div>
-							<a href="#" class="medium">Next review</a>
-							<a href="#"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#DC5750"/>
-							</svg></a>
+							<a href="#" class="next-review">
+								<p class="medium">Next review</p>
+								<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#DC5750"/>
+								</svg></a>
 						</div>
 					</div>
 				</div>
@@ -615,9 +616,6 @@ export default {
 					margin-top: 32px;
 					display: flex;
 					align-items: center;
-					.link {
-						margin-right: 4px;
-					}
 				}
 			}
 			h2 {
@@ -625,7 +623,6 @@ export default {
 				margin-top: 16px;
 			}
 			a {
-				text-decoration: none;
 				color: var(--lightgreen);
 			}
 		}
@@ -973,6 +970,13 @@ export default {
 					margin-bottom: 32px;
 					& a:first-child {
 						margin-right: 48px;
+					}
+					& a {
+						color: var(--gray);
+					}
+					& a:hover {
+						text-decoration: underline var(--blue);
+						color: var(--blue);
 					}
 				}
 				.tab-appear {

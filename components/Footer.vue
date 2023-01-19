@@ -27,8 +27,8 @@
 			<div class="wrapper">
 				<p class="medium">© Financial Match 2022 All rights reserved.</p>
       	<div class="links">
-      	  <a href="#" class="medium">Terms and Conditions</a>
-      	  <a href="#" class="medium">Privacy policy</a>
+      	  <nuxt-link to="/terms-and-conditions" href="#" class="medium">Terms and Conditions</nuxt-link>
+      	  <nuxt-link to="/privacy-policy" href="#" class="medium">Privacy policy</nuxt-link>
       	</div>
 			</div>
     </div>
@@ -77,6 +77,9 @@ footer {
 		.links {
 			& a:first-child {
 				margin-right: 32px;
+			}
+			& a:hover {
+				text-decoration: underline;
 			}
 		}
 	}

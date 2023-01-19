@@ -6,6 +6,7 @@
 	--blue: #1D3C86;
 	--lightgreen: #41A280;
 	--red: #DC5750;
+	--darkred: rgb(185, 50, 50);
 	--yelow: #F4DE82;
 	--green: #30785D;
 	--whitish: #F4EFE5;
@@ -116,6 +117,7 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 	color: var(--black);
+	transition: .3s;
 }
 
 img {
@@ -173,6 +175,26 @@ button {
 			opacity: 0.5;
 		}
 	}
+	&.red {
+		background-color: var(--white);
+		color: var(--red);
+		&:enabled {
+			border: 2px solid var(--red);
+			color: var(--red);
+		}
+		&:hover {
+			border: 2px solid var(--darkred);
+			color: var(--darkred);
+		}
+		&:focus {
+			border: 4px solid var(--darkred);
+			color: var(--darkred);
+		}
+		&:active {
+			border: 2px solid var(--red);
+			color: var(--red);
+		}
+	}
 }
 /* --------------------
     END button
@@ -207,10 +229,7 @@ button {
 		}
 	}
 	&:focus {
-		p {
-			text-decoration-line: underline;
-			text-decoration-color: var(--green);
-		}
+		text-decoration: underline var(--lightgreen);
 		svg {
 			transform: rotate(45deg);
 			path {
@@ -232,6 +251,59 @@ button {
 }
 /* ------------------------
     END link "read-more"
+--------------------------- */
+
+/* ------------------------
+    START link "next-review"
+--------------------------- */
+.next-review {
+	display: flex;
+	svg {
+		margin-left: 4px;
+		transition: .2s;
+	}
+	&:enabled {
+		p {
+			color: var(--red);
+		}
+		svg path {
+			fill: var(--red);
+		}
+	}
+	&:hover {
+		p {
+			color: var(--darkred);
+		}
+		svg {
+			transform: rotate(45deg);
+			path {
+				fill: var(--darkred);
+			}
+		}
+	}
+	&:focus {
+		text-decoration: underline var(--red);
+		svg {
+			transform: rotate(45deg);
+			path {
+				fill: var(--darkred);
+			}
+		}
+	}
+	&:active {
+		p {
+			color: var(--red);
+		}
+		svg {
+			transform: rotate(45deg);
+			path {
+				fill: var(--red);
+			}
+		}
+	}
+}
+/* ------------------------
+    END link "next-review"
 --------------------------- */
 
 /* --------------------

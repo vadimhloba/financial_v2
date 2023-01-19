@@ -2,7 +2,9 @@
 
 	<div class="privacy-policy_page">
 
-		<h1 class="title">Privacy policy</h1>
+		<aside>
+			<h1 class="title">Privacy policy</h1>
+		</aside>
 
 		<section>
 			<div class="container">

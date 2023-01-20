@@ -8,7 +8,7 @@
 			<div class="col-two">
 				<div class="row-one">
 					<h2 class="regular desc">We've helped clients of all sizes and across multiple different industries</h2>
-					<button class="green">Check eligibility</button>
+					<button class="custom green">Check eligibility</button>
 				</div>
 				<div class="row-two">
 					<div>

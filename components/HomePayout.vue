@@ -5,7 +5,7 @@
 			<div class="wrapper">
 				<div class="desc">
 					<h1 class="title">Estimate your ERC Payout</h1>
-					<button class="red">Check eligibility</button>
+					<button class="custom red">Check eligibility</button>
 				</div>
 				<div class="pay-cost">
 					<div class="wrap">

@@ -6,7 +6,7 @@
 				<h1>Has your business been impacted by the restrictions and impacts of COVID-19?</h1>
 				<div class="column">
 					<p>Our professionals do all the hard work so you can sleep at night knowing it was done right</p>
-					<button>Check eligibility</button>
+					<button class="custom">Check eligibility</button>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@ export default {
 		width: 100%;
 	}
 	p {
-		margin: 175px 158px 0 0;
+		padding: clamp(32px, 10cqi, 175px) clamp(141px, 10cqi, 158px) 0 0;
 		max-width: 312px;
 		width: 100%;
 	}

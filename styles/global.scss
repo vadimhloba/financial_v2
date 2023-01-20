@@ -75,14 +75,24 @@ h1, h2, h3, p, a {
 
 h1 {
 	font-weight: 600;
-	font-size: 56px;
+	font-size: 32px;
 	line-height: 130%;
+	@media (min-width: 992px) {
+		font-size: 56px;
+		line-height: 130%;
+	}
 }
 
 h2, span {
-	font-weight: 600;
-	font-size: 32px;
+	font-weight: 400;
+	font-size: 20px;
 	line-height: 130%;
+	
+	@media (min-width: 992px) {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 130%;
+	}
 	&.regular {
 		font-weight: 400;
 		font-size: 32px;
@@ -102,9 +112,14 @@ h3 {
 }
 
 p, a, li {
-	font-weight: 400;
-	font-size: 20px;
+	font-weight: 600;
+	font-size: 16px;
 	line-height: 140%;
+	@media (min-width: 992px) {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+	}
 }
 
 .medium {
@@ -125,10 +140,16 @@ img {
 	height: auto;
 }
 
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
 /* --------------------
     START button
 -------------------- */
-button {
+.custom {
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 140%;

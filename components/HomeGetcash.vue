@@ -5,7 +5,7 @@
 			<div class="col-one">
 				<h3>Most business owners don't realize they can qualify to</h3>
 				<h1>Get <span class="regular">$</span>26,000 cash <br> for each W2 employee</h1>
-				<button class="green">Check eligibility</button>
+				<button class="custom green">Check eligibility</button>
 			</div>
 			<div class="col-two">
 				<div class="row-one">

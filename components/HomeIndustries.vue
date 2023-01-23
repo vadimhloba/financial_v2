@@ -37,6 +37,7 @@
 					</div>
 				</div>
 			</div>
+			<button class="custom green tab-appear">Check eligibility</button>
 		</div>
 	</section>
 
@@ -50,7 +51,10 @@ export default {
 
 <style lang="scss" scoped>
 .industries-helped {
-	padding: 160px 0 185px;
+	padding: 80px 0;
+	@media(min-width:992px) {
+		padding: 160px 0;
+  }
 	.col-one {
 		border-bottom: 2px solid var(--grayish);
 		h1 {
@@ -62,12 +66,24 @@ export default {
 	.col-two {
 		margin-top: 22px;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		@media(min-width:992px) {
+			grid-template-columns: repeat(2, 1fr);
+  	}
+		.row-one {
+			button {
+				display: none;
+				@media(min-width:992px) {
+					display: block;
+  			}
+			}
+		}
 		h2 {
 			&.desc {
 				margin-bottom: 32px;
-				max-width: 344px;
 				width: 100%;
+				@media(min-width:992px) {
+					max-width: 344px;
+  			}
 			}
 			&.desc, &.number {
 				color: var(--gray);
@@ -85,8 +101,24 @@ export default {
 				justify-content: space-between;
 				border-bottom: 2px solid var(--grayish);
 				align-items: center;
+				&:first-child {
+					border-top: 2px solid var(--grayish);
+					@media(min-width:992px) {
+						border-top: 0;
+						margin-top: -24px;
+  				}
+				}
 			}
 		}
+	}
+	.tab-appear {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 48px;
+		@media(min-width:992px) {
+			display: none;
+  	}
 	}
 }
 </style>

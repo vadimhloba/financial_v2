@@ -60,10 +60,18 @@ export default {
 
 <style lang="scss" scoped>
 .how-it-works {
-	padding-bottom: 160px;
+	padding-bottom: 80px;
 	background-color: var(--green);
+	@media(min-width:992px) {
+		padding-bottom: 160px;
+  }
 	.container {
-		padding: 160px 0;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		@media(min-width:992px) {
+			padding-top: 160px;
+			padding-bottom: 160px;
+  	}
 	}
 	h1, h2, p {
 		color: var(--white);
@@ -73,12 +81,18 @@ export default {
 	}
 	.column {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		@media(min-width:768px) {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  	}
 		.item {
-			padding: 24px;
+			padding: 16px;
 			max-width: 346px;
 			border: 2px solid var(--lightgreen);
 			margin: -1px;
+			@media(min-width:576px) {
+				padding: 24px;
+  		}
 			&:nth-child(2) .wrapper, &:nth-child(3) .wrapper,
 			&:nth-child(5) .wrapper, &:nth-child(6) .wrapper {
 					margin-bottom: 130px;
@@ -97,13 +111,47 @@ export default {
 				margin-left: auto;
 			}
 			&.item-a {
-				grid-column: 2;
+				border-radius: 10px 0px 0px 0px;
+				@media(min-width:1200px) {
+					border-radius: 0;
+					grid-column: 2;
+  			}
+			}
+			&.item-b {
+				border-radius: 0px 10px 0px 0px;
+				@media(min-width:992px) {
+					border-radius: 0;
+  			}
 			}
 			&.item-c {
-				border-radius: 0px 10px 10px 0px;
+				border-radius: 0;
+				@media(min-width:992px) {
+					border-radius: 0px 10px 0px 0px;
+  			}
+				@media(min-width:1200px) {
+					border-radius: 0px 10px 10px 0px;
+  			}
 			}
 			&.item-d {
-				border-radius: 10px 0px 0px 10px;
+				border-radius: 0;
+				@media(min-width:992px) {
+					border-radius: 0px 0px 0px 10px;
+  			}
+				@media(min-width:1200px) {
+					border-radius: 10px 0px 0px 10px;
+  			}
+			}
+			&.item-e {
+				border-radius: 0px 0px 0px 10px;
+				@media(min-width:992px) {
+					border-radius: 0;
+  			}
+			}
+			&.item-f {
+				border-radius: 0px 0px 10px 0px;
+				@media(min-width:1200px) {
+					border-radius: 0;
+  			}
 			}
 		}
 	}

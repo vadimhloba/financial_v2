@@ -56,16 +56,20 @@ export default {
 
 <style lang="scss" scoped>
 .why-us {
-	padding-bottom: 160px;
+	padding-bottom: 80px;
+	@media(min-width:992px) {
+		padding-bottom: 160px;
+  }
 	h1 {
 		margin-bottom: 56px;
 	}
 	.column {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		@media(min-width:768px) {
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  	}
 		.item {
 			padding: 24px;
-			max-width: 346px;
 			border: 2px solid var(--grayish);
 			margin: -1px;
 			.wrapper {
@@ -83,27 +87,51 @@ export default {
 			min-height: 238px;
 			padding: 24px;
 			border: none;
-			grid-column: 2;
+			display: none;
+			@media(min-width:992px) {
+				display: grid;
+  		}
+			@media(min-width:1200px) {
+				grid-column: 2;
+  		}
 		}
 		.item-a {
-			grid-row: 2;
-			border-radius: 10px 0px 0px 10px;
+			border-radius: 0px 10px 0px 0px;
+			grid-column: 2;
+			@media(min-width:1200px) {
+				border-radius: 10px 0px 0px 10px;
+				grid-column: 1;
+				grid-row: 2;
+  		}
 		}
 		.item-b {
-			grid-row: 3;
-			grid-column: 2;
+			border-radius: 10px 0px 0px 0px;
+			@media(min-width:1200px) {
+				border-radius: none;
+				grid-row: 3;
+				grid-column: 2;
+  		}
 		}
 		.item-c {
-			grid-row: 3;
-			grid-column: 3;
+			@media(min-width:1200px) {
+				grid-row: 3;
+				grid-column: 3;
+  		}
 		}
 		.item-d {
-			grid-row: 2;
-			grid-column: 3;
+			border-radius: 0px 0px 0px 10px;
+			@media(min-width:1200px) {
+				border-radius: none;
+				grid-row: 2;
+				grid-column: 3;
+  		}
 		}
 		.item-e {
-			grid-column: 4;
-			border-radius: 0px 10px 10px 0px;
+			border-radius: 0px 0px 10px 0px;
+			@media(min-width:1200px) {
+				border-radius: 0px 10px 10px 0px;
+				grid-column: 4;
+  		}
 		}
 		h2, p.desc-title {
 			color: var(--blue);

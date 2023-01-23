@@ -2,7 +2,7 @@
 
 	<div class="index-page">
 
-		<Homebusiness/>
+		<HomeBusiness/>
 
 		<HomeAboutus/>
 

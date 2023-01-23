@@ -47,11 +47,15 @@ export default {
 	padding-bottom: 160px;
 	.container {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		@media(min-width:992px) {
+			grid-template-columns: repeat(2, 1fr);
+  	}
 	}
 	.col-one {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		@media(min-width:992px) {
+			grid-template-columns: repeat(2, 1fr);
+  	}
 		.row-two {
 			display: grid;
 			align-items: end;

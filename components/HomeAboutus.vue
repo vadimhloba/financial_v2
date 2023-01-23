@@ -36,8 +36,12 @@ export default {
 	}
 	.wrapper {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		@media(min-width:768px) {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  	}
 		div {
+			padding: 5px;
 			display: grid;
 			border: 2px solid var(--grayish);
 			max-width: 100%;
@@ -50,13 +54,19 @@ export default {
 			}
 		}
 		.item-a {
-			grid-column: 4;
+			@media(min-width:1200px) {
+				grid-column: 4;
+  		}
 		}
 		.item-b {
-			grid-column: 2;
+			@media(min-width:1200px) {
+				grid-column: 2;
+  		}
 		}
 		.item-c {
-			grid-column: 3;
+			@media(min-width:1200px) {
+				grid-column: 3;
+  		}
 		}
 	}
 }

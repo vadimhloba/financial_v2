@@ -72,7 +72,10 @@ export default {
 
 <style lang="scss" scoped>
 .client-review {
-	padding-bottom: 160px;
+	padding-bottom: 80px;
+	@media(min-width:992px) {
+		padding-bottom: 160px;
+  }
 	.col-one {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

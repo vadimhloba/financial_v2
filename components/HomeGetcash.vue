@@ -38,6 +38,7 @@
 					</div>
 				</div>
 			</div>
+			<button class="custom green tab-appear">Check eligibility</button>
 		</div>
 	</section>
 
@@ -51,9 +52,19 @@ export default {
 
 <style lang="scss" scoped>
 .get-cash {
-	padding: 160px 0;
+	padding: 80px 0;
+	@media(min-width:992px) {
+		padding: 160px 0;
+  }
 	.col-one {
 		border-bottom: 2px solid var(--grayish);
+		button {
+			display: none;
+			margin-bottom: 38px;
+			@media(min-width:992px) {
+				display: block;
+  		}
+		}
 		h3 {
 			color: var(--gray);
 		}
@@ -62,26 +73,41 @@ export default {
 			width: 100%;
 			margin: 8px 0 32px;
 		}
-		button {
-			margin-bottom: 38px;
-		}
 	}
 	.col-two {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin-top: 40px;
+		margin-top: 32px;
+		@media(min-width:992px) {
+			grid-template-columns: repeat(2, 1fr);
+			margin-top: 40px;
+  	}
 		.row-one {
 			h2 {
 				color: var(--gray);
-				max-width: 282px;
 				width: 100%;
+				@media(min-width:992px) {
+					max-width: 282px;
+  			}
 			}
 		}
 		.row-two {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
 			grid-column-gap: 32px;
 			grid-row-gap: 34px;
+			margin-top: 32px;
+			@media(min-width:768px) {
+				grid-template-columns: repeat(2, 1fr);
+  		}
+			@media(min-width:992px) {
+				grid-template-columns: repeat(2, 1fr);
+				margin-top: 0;
+  		}
+			& div {
+				padding-left: 102px;
+				@media(min-width:992px) {
+					padding-left: 0;
+  			}
+			}
 			h2 {
 				margin-bottom: 8px;
 			}
@@ -89,6 +115,15 @@ export default {
 				padding-inline-start: 19px;
 			}
 		}
+	}
+	.tab-appear {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 48px;
+		@media(min-width:992px) {
+			display: none;
+  	}
 	}
 }
 </style>

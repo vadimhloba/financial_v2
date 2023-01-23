@@ -171,13 +171,31 @@ export default {
 
 <style lang="scss" scoped>
 .faq {
-	padding-bottom: 160px;
+	padding-bottom: 80px;
+	@media(min-width:1440px) {
+		padding-bottom: 160px;
+  }
 	h1 {
 		margin-bottom: 32px;
 	}
 	.column {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px;
+		align-items: end;
+		margin: 0 auto;
+		@media(min-width:992px) {
+			width: 65%;
+  	}
+		@media(min-width:1440px) {
+			grid-template-columns: repeat(2, 1fr);
+			width: 100%;
+  	}
+		img {
+			order: 2;
+			@media(min-width:1440px) {
+				order: 0;
+  		}
+		}
 		.col-desc {
 			.links {
 				margin-bottom: 32px;
@@ -198,6 +216,10 @@ export default {
 					padding: 24px 0;
 					display: flex;
 					align-items: center;
+					justify-content: space-between;
+					&:last-child {
+						padding-bottom: 0;
+					}
 					svg {
 						margin-left: 15px;
 					}

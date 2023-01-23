@@ -49,7 +49,9 @@ export default {
 	.col-two {
 		margin-top: 40px;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		@media(min-width:992px) {
+			grid-template-columns: repeat(2, 1fr);
+  	}
 		.row-one {
 			h2 {
 				color: var(--gray);
@@ -59,8 +61,10 @@ export default {
 		}
 		.row-two {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 32px;
+			@media(min-width:992px) {
+				grid-template-columns: repeat(2, 1fr);
+  		}
 			p {
 				margin-top: 8px;
 			}

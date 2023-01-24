@@ -1,7 +1,7 @@
 <template>
   <main>
-    <Header />
-    <Nuxt />
-    <Footer />
+    <Header/>
+    <Nuxt/>
+    <Footer/>
   </main>
 </template>

@@ -44,7 +44,10 @@ export default {
 
 <style lang="scss" scoped>
 .our-philosophy {
-	padding-bottom: 160px;
+	padding-bottom: 80px;
+	@media(min-width:992px) {
+		padding-bottom: 160px;
+	}
 	.container {
 		display: grid;
 		@media(min-width:992px) {
@@ -61,14 +64,24 @@ export default {
 			align-items: end;
 			margin-right: 32px;
 			.links {
-				margin-top: 32px;
+				margin-top: 24px;
+				margin-bottom: 40px;
 				display: flex;
 				align-items: center;
+				@media(min-width:992px) {
+					margin-top: 32px;
+					margin-bottom: 0;
+  			}
 			}
 		}
 		h2 {
 			color: var(--gray);
-			margin-top: 16px;
+			margin-top: 8px;
+			margin-bottom: 32px;
+			@media(min-width:992px) {
+				margin-top: 16px;
+				margin-bottom: 0;
+  		}
 		}
 		a {
 			color: var(--lightgreen);

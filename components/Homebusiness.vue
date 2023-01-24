@@ -3,7 +3,8 @@
 	<section class="business-impacted">
 		<div class="container">
 			<div class="bg-img">
-				<img src="/img/background/bg_bus-imp.png">
+				<img class="pic-desktop" src="/img/background/bg_bus-imp.png">
+				<img class="pic-mobile" src="/img/background/bg_bus-imp_mobile.png">
 			</div>
 			<div class="desc">
 				<h1>Has your business been <br> impacted by the restrictions <br> and impacts of COVID-19?</h1>
@@ -31,23 +32,53 @@ export default {
 		display: block;
 	}
 	.bg-img {
-		position: absolute;
-		left: 0;
-		padding: 0 15px;
+		position: relative;
+		.pic-desktop {
+			position: absolute;
+			display: none;
+			@media(min-width:992px) {
+				display: block;
+  		}
+		}
+		.pic-mobile {
+			position: absolute;
+			display: block;
+			left: 50%;
+			transform: translateX(-50%);
+			@media(min-width:992px) {
+				display: none;
+  		}
+		}
 	}
 	.desc {
 		position: relative;
-		padding: 16px;
+		padding: 16px 0;
 		max-width: 100%;
 		@media(min-width:992px) {
   	  padding: 32px;
   	}
 	}
-	.column {
+	.column2 {
 		display: block;
 		align-items: flex-end;
 		@media(min-width:1200px) {
   	  display: flex;
+  	}
+	}
+	.column {
+		position: relative;
+		display: grid;
+		
+		max-width: 300px;
+		width: 100%;
+		margin: 0 auto;
+		@media(min-width:992px) {
+			margin: 0;
+  	}
+		@media(min-width:1200px) {
+			max-width: 100%;
+			align-items: flex-end;
+			display: flex;
   	}
 	}
 	
@@ -63,25 +94,22 @@ export default {
 	}
 	p {
 		padding: 0;
-		margin-bottom: clamp(0px, 3cqi, 40px);
-		max-width: 312px;
-		width: 52cqw;
+		max-width: 189px;
+		margin-bottom: 32px;
 		@media(min-width:576px) {
-			margin-bottom: 60px;
-			width: 100%;
-  	}
-		@media(min-width:768px) {
-			margin-bottom: 110px;
+			max-width: 189px;
   	}
 		@media(min-width:992px) {
-  	  padding: 32px 0 26px;
+			width: 100%;
+			max-width: 312px;
+  	  padding: 17px 0;
 			margin-bottom: 0;
   	}
 		@media(min-width:1200px) {
-  	  padding: 175px 28px 0 0;
+  	  padding: 160px 28px 0 0;
   	}
 		@media(min-width:1440px) {
-  	  padding: 175px 145px 0 0;
+  	  padding: 174px 145px 0 0;
   	}
 	}
 }

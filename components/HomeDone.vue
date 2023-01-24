@@ -7,7 +7,7 @@
 			</div>
 			<div class="col-two">
 				<div class="row-one">
-					<h2 class="regular">We make <br> the complicated simple</h2>
+					<h2 class="regular">We make the complicated simple</h2>
 				</div>
 				<div class="row-two">
 					<div>
@@ -37,36 +37,53 @@ export default {
 
 <style lang="scss" scoped>
 .done-for-you {
-	padding-bottom: 160px;
+	padding-bottom: 80px;
+	@media(min-width:992px) {
+		padding-bottom: 160px;
+	}
 	.col-one {
 		border-bottom: 2px solid var(--grayish);
 		h1 {
 			max-width: 494px;
 			width: 100%;
-			margin-bottom: 40px;
+			margin-bottom: 32px;
+			@media(min-width:992px) {
+				margin-bottom: 40px;
+			}
 		}
 	}
 	.col-two {
-		margin-top: 40px;
+		margin-top: 32px;
 		display: grid;
 		@media(min-width:992px) {
 			grid-template-columns: repeat(2, 1fr);
+			margin-top: 40px;
   	}
 		.row-one {
 			h2 {
 				color: var(--gray);
-				max-width: 249px;
 				width: 100%;
+				margin-bottom: 32px;
+				@media(min-width:992px) {
+					margin-bottom: 0;
+					max-width: 249px;
+  			}
 			}
 		}
 		.row-two {
 			display: grid;
-			grid-gap: 32px;
+			grid-gap: 16px;
+			padding-left: 102px;
 			@media(min-width:992px) {
 				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 32px;
+				padding-left: 0;
   		}
 			p {
-				margin-top: 8px;
+				margin-top: 4px;
+				@media(min-width:992px) {
+					margin-top: 8px;
+  			}
 			}
 		}
 	}

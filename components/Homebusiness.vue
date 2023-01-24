@@ -2,6 +2,7 @@
 
 	<section class="business-impacted">
 		<div class="container">
+			<h1 class="tab-title">Has your business been impacted by the restrictions and impacts of COVID-19?</h1>
 			<div class="bg-img">
 				<img class="pic-desktop" src="/img/background/bg_bus-imp.png">
 				<img class="pic-mobile" src="/img/background/bg_bus-imp_mobile.png">
@@ -31,6 +32,14 @@ export default {
 		position: relative;
 		display: block;
 	}
+	.tab-title {
+		display: block;
+		color: var(--black);
+		margin-bottom: 24px;
+		@media(min-width:992px) {
+			display: none;
+  	}
+	}
 	.bg-img {
 		position: relative;
 		.pic-desktop {
@@ -57,13 +66,36 @@ export default {
 		@media(min-width:992px) {
   	  padding: 32px;
   	}
-	}
-	.column2 {
-		display: block;
-		align-items: flex-end;
-		@media(min-width:1200px) {
-  	  display: flex;
-  	}
+		h1, p {
+			color: var(--white);
+		}
+		h1 {
+			display: none;
+			width: 56cqw;
+			@media(min-width:992px) {
+  		  display: block;
+  		}
+		}
+		p {
+			padding: 0;
+			max-width: 189px;
+			margin-bottom: 32px;
+			@media(min-width:576px) {
+				max-width: 189px;
+  		}
+			@media(min-width:992px) {
+				width: 100%;
+				max-width: 312px;
+  		  padding: 17px 0;
+				margin-bottom: 0;
+  		}
+			@media(min-width:1200px) {
+  		  padding: 160px 28px 0 0;
+  		}
+			@media(min-width:1440px) {
+  		  padding: 174px 145px 0 0;
+  		}
+		}
 	}
 	.column {
 		position: relative;
@@ -79,37 +111,6 @@ export default {
 			max-width: 100%;
 			align-items: flex-end;
 			display: flex;
-  	}
-	}
-	
-	h1, p {
-		color: var(--white);
-	}
-	h1 {
-		display: none;
-		width: 56cqw;
-		@media(min-width:992px) {
-  	  display: block;
-  	}
-	}
-	p {
-		padding: 0;
-		max-width: 189px;
-		margin-bottom: 32px;
-		@media(min-width:576px) {
-			max-width: 189px;
-  	}
-		@media(min-width:992px) {
-			width: 100%;
-			max-width: 312px;
-  	  padding: 17px 0;
-			margin-bottom: 0;
-  	}
-		@media(min-width:1200px) {
-  	  padding: 160px 28px 0 0;
-  	}
-		@media(min-width:1440px) {
-  	  padding: 174px 145px 0 0;
   	}
 	}
 }

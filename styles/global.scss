@@ -195,6 +195,7 @@ button {
 			background-color: var(--lightgreen);
 		}
 		&:active {
+			border: 2px solid var(--lightgreen);
 			background-color: var(--lightgreen);
 		}
 		&:disabled {

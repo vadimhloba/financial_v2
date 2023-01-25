@@ -3,6 +3,7 @@ export default ({ app }, inject) => {
     setTimeout(()=>{
       const offset = window.scrollY + window.innerHeight * .60
       const animBlocks = document.querySelectorAll('[data-anim]');
+      console.dir(animBlocks);
       if(animBlocks.length > 0){
         animBlocks.forEach(item => {
           if(item.dataset.parent === "1"){

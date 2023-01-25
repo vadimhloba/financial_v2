@@ -4,12 +4,58 @@
 		<div class="container">
 			<h1 class="tab-title">Has your business been impacted by the restrictions and impacts of COVID-19?</h1>
 			<div class="bg-img">
-				<img class="pic-desktop" src="/img/background/bg_bus-imp.png">
-				<img class="pic-mobile" src="/img/background/bg_bus-imp_mobile.png">
+				<svg
+					class="pic-desktop" width="1376" height="542" viewBox="0 0 1376 542" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1376 100.357V267.346C1376 272.945 1373.15 277.848 1369.04 279.317L691.474 540.66C689.178 541.546 686.755 542 684.294 542C672.362 542 635.679 542 634.98 542H9.44429C4.23081 542 0 536.44 0 529.588V12.4122C0 5.56036 4.23081 0 9.44429 0H822L1032 542H1224V88L1366.55 87.945C1371.76 87.945 1375.99 93.5054 1375.99 100.357H1376Z" fill="#41A280"/>
+					<rect
+						class="animate__animated"
+						data-anim="heightOut"
+            data-duration="400"
+						style="opacity: 1;"
+						width="987.27"
+						height="542"
+						fill="#F4EFE5">
+					</rect>
+					<rect
+						class="animate__animated"
+						data-anim="heightOut"
+            data-delay="390"
+            data-duration="300"
+						style="opacity: 1;"
+						x="987.275"
+						y="335.25"
+						width="236.73"
+						height="206.75"
+						fill="#F4EFE5">
+					</rect>
+					<rect
+						class="animate__animated"
+						data-anim="heightOut"
+            data-delay="680"
+            data-duration="300"
+						style="opacity: 1;"
+						x="1224"
+						y="88"
+						width="152"
+						height="247"
+						fill="#F4EFE5">
+					</rect>
+				</svg>
+				<svg class="pic-mobile" width="343" height="203" viewBox="0 0 343 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M343 37.5877V100.131C343 102.228 342.29 104.065 341.265 104.615L206.307 202.057C205.457 202.67 204.462 203 203.415 203C195.266 203 158.469 203 158.283 203H2.35421C1.05463 203 0 200.917 0 198.351V4.64886C0 2.08257 1.05463 0 2.35421 0H225.5L273.5 203H301V32.9388H340.644C341.944 32.9388 342.999 35.0214 342.999 37.5877H343Z" fill="#41A280"/>
+				</svg>
 			</div>
 			<div class="desc">
-				<h1>Has your business been <br> impacted by the restrictions <br> and impacts of COVID-19?</h1>
-				<div class="column">
+				<h1
+				class="animate__animated"
+					data-anim="fadeInUp"
+					data-delay="1000">
+					Has your business been <br> impacted by the restrictions <br> and impacts of COVID-19?
+				</h1>
+				<div 
+					class="column animate__animated"
+					data-anim="fadeInUp"
+					data-delay="1000">
 					<p>Our professionals do all the hard work so you can sleep at night knowing it was done right</p>
 					<button class="custom">Check eligibility</button>
 				</div>

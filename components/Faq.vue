@@ -4,7 +4,44 @@
 		<div class="container">
 			<h1>Frequently Asked Questions</h1>
 			<div class="column">
-				<img src="/img/background/faq.png">
+				<svg width="656" height="557" viewBox="0 0 656 557" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.00264e-05 492.874L0 68.9191C0 61.5628 5.96347 55.5993 13.3198 55.5993H60.3071L249.471 471.455L344 446.098V0H642.68C650.036 0 656 5.96346 656 13.3198V352.185C656 358.212 651.953 363.488 646.131 365.05L344 446.098V557H288.383L249.471 471.455L121.668 505.739C120.543 506.041 119.382 506.194 118.217 506.194H13.3198C5.9635 506.194 2.03633e-05 500.23 2.00264e-05 492.874Z" fill="#1D3C86"/>
+					<rect
+						class="animate__animated"
+						data-anim="heightOut"
+						data-duration="400"
+						style="opacity: 1"
+						y="55"
+						width="249.47"
+						height="452"
+						fill="#F4EFE5"/>
+					<rect
+						class="animate__animated"
+						data-anim="heightOut"
+						data-delay="390"
+						data-duration="300"
+						style="opacity: 1"
+						x="249.4"
+						y="446"
+						width="94.6"
+						height="111"
+						fill="#F4EFE5"/>
+					<rect
+						class="animate__animated"
+						data-anim="heightOut"
+						data-delay="680"
+						data-duration="300"
+						style="opacity: 1"
+						x="344"
+						width="312"
+						height="446.1"
+						fill="#F4EFE5"/>
+					<defs>
+						<clipPath id="clip0_213_2517">
+							<rect width="656" height="557" fill="white"></rect>
+						</clipPath>
+					</defs>
+				</svg>
 				<div class="col-desc">
 					<div class="links">
 						<a href="#">Qualification</a>

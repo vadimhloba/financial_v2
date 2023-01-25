@@ -8,39 +8,59 @@
 					<p>We do this by listening and understanding your businesses, identifying your needs, making a plan and holding your hand as we help you utilize government programs, get funding, and optimize your taxes.</p>
 				</div>
 				<div class="item item-a">
-					<div class="wrapper">
-						<h2 class="regular">01</h2>
-						<p class="desc-title">State Licensed CPA's</p>
+					<div
+						class="box animate__animated"
+						data-anim="findIn">
+						<div class="wrapper">
+							<h2 class="regular">01</h2>
+							<p class="desc-title">State Licensed CPA's</p>
+						</div>
+						<p class="medium">A certified public accountant (CPA), however, is someone who has earned a professional designation through a combination of education</p>
 					</div>
-					<p class="medium">A certified public accountant (CPA), however, is someone who has earned a professional designation through a combination of education</p>
 				</div>
 				<div class="item item-b">
-					<div class="wrapper">
-						<h2 class="regular">02</h2>
-						<p class="desc-title">Multiple Ways To Quality</p>
+					<div
+						class="box animate__animated"
+						data-anim="findIn">
+						<div class="wrapper">
+							<h2 class="regular">02</h2>
+							<p class="desc-title">Multiple Ways To Quality</p>
+						</div>
+						<p class="medium">The totality of features and characteristics of a product or service that bears on its ability to meet a stated or implied need</p>
 					</div>
-					<p class="medium">The totality of features and characteristics of a product or service that bears on its ability to meet a stated or implied need</p>
 				</div>
 				<div class="item item-c">
-					<div class="wrapper">
-						<h2 class="regular">03</h2>
-						<p class="desc-title">Integrity Over Profit</p>
+					<div
+						class="box animate__animated"
+						data-anim="findIn">
+						<div class="wrapper">
+							<h2 class="regular">03</h2>
+							<p class="desc-title">Integrity Over Profit</p>
+						</div>
+						<p class="medium">Integrity in business enhances your reputation — which can help attract and retain customers</p>
 					</div>
-					<p class="medium">Integrity in business enhances your reputation — which can help attract and retain customers</p>
 				</div>
 				<div class="item item-d">
-					<div class="wrapper">
-						<h2 class="regular">04</h2>
-						<p class="desc-title">No Upfront Fees</p>
+					<div
+						class="box animate__animated"
+						data-anim="findIn">
+						<div class="wrapper">
+							<h2 class="regular">04</h2>
+							<p class="desc-title">No Upfront Fees</p>
+						</div>
+						<p class="medium">An amount of money paid before a particular piece of work or a particular service is done or received</p>
 					</div>
-					<p class="medium">An amount of money paid before a particular piece of work or a particular service is done or received</p>
 				</div>
 				<div class="item item-e">
-					<div class="wrapper">
-						<h2 class="regular">05</h2>
-						<p class="desc-title">Honest & Accurat</p>
+					<div
+						class="box animate__animated"
+						data-anim="findIn">
+						<div class="wrapper">
+							<h2 class="regular">05</h2>
+							<p class="desc-title">Honest & Accurat</p>
+						</div>
+						<p class="medium">A boss who admits to having acted in their own interest may show honesty by rectifying the situation</p>
 					</div>
-					<p class="medium">A boss who admits to having acted in their own interest may show honesty by rectifying the situation</p>
 				</div>
 			</div>
 		</div>
@@ -107,7 +127,7 @@ export default {
 		.item-b {
 			border-radius: 10px 0px 0px 0px;
 			@media(min-width:1200px) {
-				border-radius: none;
+				border-radius: 0;
 				grid-row: 3;
 				grid-column: 2;
   		}
@@ -121,7 +141,7 @@ export default {
 		.item-d {
 			border-radius: 0px 0px 0px 10px;
 			@media(min-width:1200px) {
-				border-radius: none;
+				border-radius: 0;
 				grid-row: 2;
 				grid-column: 3;
   		}

@@ -8,6 +8,24 @@
 		transform: translateZ(0);
 	}
 }
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateZ(0);
+	}
+}
+@keyframes findIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+    opacity: 1;
+	}
+}
 @keyframes heightOut {
 	100% {
     visibility: hidden;
@@ -22,6 +40,12 @@
 	}
 	&__fadeInUp {
 		animation-name: fadeInUp;
+	}
+	&__fadeInRight {
+		animation-name: fadeInRight;
+	}
+	&__findIn {
+		animation-name: findIn;
 	}
 	&__heightOut {
 		animation-name: heightOut;

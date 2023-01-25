@@ -4,42 +4,54 @@
 		<div class="container">
 			<h1>How it works</h1>
 			<div class="column">
-				<div class="item item-a">
+				<div
+					class="item item-a animate__animated"
+					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>01</h2>
 						<p>Qualification Quiz</p>
 					</div>
 					<p class="medium item-desc">A boss who admits to having acted in their own interest may show honesty by rectifying the situation</p>
 				</div>
-				<div class="item item-b">
+				<div
+					class="item item-b animate__animated"
+					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>02</h2>
 						<p>Fill Out Application</p>
 					</div>
 					<p class="medium item-desc">Online or phone</p>
 				</div>
-				<div class="item item-c">
+				<div
+					class="item item-c animate__animated"
+					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>03</h2>
 						<p>Get Docs and Info</p>
 					</div>
 					<p class="medium item-desc">Work with our team</p>
 				</div>
-				<div class="item item-d">
+				<div
+					class="item item-d animate__animated"
+					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>04</h2>
 						<p>Processing</p>
 					</div>
 					<p class="medium item-desc">A boss who admits to having acted in their own interest may show honesty by rectifying the situation</p>
 				</div>
-				<div class="item item-e">
+				<div
+					class="item item-e animate__animated"
+					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>05</h2>
 						<p>Submission</p>
 					</div>
 					<p class="medium item-desc">Online or phone</p>
 				</div>
-				<div class="item item-f">
+				<div
+					class="item item-f animate__animated"
+					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>06</h2>
 						<p>Payment from IRS</p>

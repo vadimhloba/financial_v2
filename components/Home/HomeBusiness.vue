@@ -47,7 +47,7 @@
 			</div>
 			<div class="desc">
 				<h1
-				class="animate__animated"
+					class="animate__animated"
 					data-anim="fadeInUp"
 					data-delay="1000">
 					Has your business been <br> impacted by the restrictions <br> and impacts of COVID-19?

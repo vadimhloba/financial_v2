@@ -23,17 +23,30 @@
 							</svg></a>
 					</div>
 					<div class="video-desc">
-						<h3>Selena Giri</h3>
-						<p class="medium">CEO Chess.com</p>
-						<div>
-							<h1><span class="regular">$</span>200,500</h1>
+						<div
+							class="box animate__animated"
+							data-anim="fadeInRight"
+							data-delay="50">
+							<h3>Selena Giri</h3>
+							<p class="medium">CEO Chess.com</p>
 						</div>
-						<p class="mediium">received to our clients</p>
-						<div>
-							<h1>4</h1>
-							<h2 class="regular">months</h2>
+						<div
+							class="box animate__animated"
+							data-anim="fadeInRight"
+							data-delay="50">
+							<h1 class="cost"><span class="regular">$</span>200,500</h1>
+							<p class="mediium">received to our clients</p>
 						</div>
-						<p class="medium">from call to receiving money</p>
+						<div
+							class="box animate__animated"
+							data-anim="fadeInRight"
+							data-delay="50">
+							<div style="display: flex">
+								<h1>4</h1>
+								<h2 class="regular">months</h2>
+							</div>
+							<p class="medium">from call to receiving money</p>
+						</div>
 					</div>
 				</div>
 				<div class="row-two">
@@ -122,9 +135,15 @@ export default {
 			.video-desc {
 				color: var(--white);
 				padding: 32px 63px 31px 32px;
+				.box {
+					display: block;
+				}
 				div {
 					display: flex;
 					align-items: end;
+					h1 {
+						margin-top: 11px;
+					}
 					span {
 						margin-right: 8px;
 					}

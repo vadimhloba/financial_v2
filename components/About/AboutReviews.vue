@@ -47,7 +47,7 @@
 
 <script scoped>
 export default {
-	name: 'AbReviews'
+	name: 'AboutReviews'
 }
 </script>
 

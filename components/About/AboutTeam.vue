@@ -55,7 +55,7 @@
 
 <script scoped>
 export default {
-	name: 'AbTeam'
+	name: 'AboutTeam'
 }
 </script>
 

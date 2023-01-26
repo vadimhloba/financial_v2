@@ -50,7 +50,7 @@
 
 <script scoped>
 export default {
-	name: 'AbPress'
+	name: 'AboutPress'
 }
 </script>
 

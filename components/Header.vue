@@ -25,7 +25,7 @@
 				</button>
 				<div class="header__links">
 					<nuxt-link v-if="$route.name !== 'index'" to="/" class="medium">Home</nuxt-link>
-					<nuxt-link v-if="$route.name !== 'about-us'" to="/about-us" class="medium">About us</nuxt-link>
+					<nuxt-link v-if="$route.name !== 'about'" to="/about-us" class="medium">About us</nuxt-link>
 					<nuxt-link v-if="$route.name !== 'erc'" to="/erc" class="medium">ERC</nuxt-link>
         	<a class="header__lang medium">
         	  Eng

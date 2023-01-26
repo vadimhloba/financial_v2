@@ -2,15 +2,15 @@
 
   <div class="about-us_page">
 
-		<AbPhilosophy/>
+		<AboutPhilosophy/>
 
-		<AbTeam/>
+		<AboutTeam/>
 
-		<AbPress/>
+		<AboutPress/>
 
-		<AbReviews/>
+		<AboutReviews/>
 
-		<AbContact/>
+		<AboutContact/>
 
 	</div>
 

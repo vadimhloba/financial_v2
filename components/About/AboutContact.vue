@@ -20,7 +20,7 @@
 
 <script scoped>
 export default {
-	name: 'AbContact'
+	name: 'AboutContact'
 }
 </script>
 

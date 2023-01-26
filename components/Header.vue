@@ -24,8 +24,9 @@
 					</svg>
 				</button>
 				<div class="header__links">
-					<nuxt-link to="/about-us" class="medium">About us</nuxt-link>
-					<nuxt-link to="/erc" class="medium">ERC</nuxt-link>
+					<nuxt-link v-if="$route.name !== 'index'" to="/" class="medium">Home</nuxt-link>
+					<nuxt-link v-if="$route.name !== 'about-us'" to="/about-us" class="medium">About us</nuxt-link>
+					<nuxt-link v-if="$route.name !== 'erc'" to="/erc" class="medium">ERC</nuxt-link>
         	<a class="header__lang medium">
         	  Eng
         	  <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">

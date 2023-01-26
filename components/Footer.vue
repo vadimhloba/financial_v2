@@ -6,11 +6,11 @@
       	<div class="col-one">
       	  <div class="row-one">
       	    <p class="medium">call us</p>
-      	    <h3 class="regular">(855) 855-9365</h3>
+      	    <a class="regular" href="tel:18558559365">(855) 855-9365</a>
       	  </div>
       	  <div class="row-two">
       	    <p class="medium">write to us</p>
-      	    <h3 class="regular">financialmatch@gmail.comFacebook</h3>
+      	    <a class="regular" href="mailto:financialmatch123@gmail.comFacebook">financialmatch@gmail.comFacebook</a>
       	  </div>
 				</div>
       	<div class="col-two">
@@ -143,11 +143,14 @@ footer {
 			}
 		}
 		.links {
+			a{
+				text-decoration: underline;
+			}
 			& a:first-child {
 				margin-right: 32px;
 			}
-			& a:hover {
-				text-decoration: underline;
+			& a:active {
+				text-decoration: none;
 			}
 		}
 	}

@@ -18,8 +18,8 @@
 							entire being originating from cells in particular, on our
 							chromosomes and mitochondrial DNA.</p>
 						<div class="links">
-							<a href="#" class="read-more">
-								<p class="D">Read More</p>
+							<a href="/about-us" to="about-us" class="read-more">
+								<p class="medium">Read More</p>
 								<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 								</svg>

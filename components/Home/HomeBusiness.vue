@@ -8,20 +8,15 @@
 					class="pic-desktop" width="1376" height="542" viewBox="0 0 1376 542" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1376 100.357V267.346C1376 272.945 1373.15 277.848 1369.04 279.317L691.474 540.66C689.178 541.546 686.755 542 684.294 542C672.362 542 635.679 542 634.98 542H9.44429C4.23081 542 0 536.44 0 529.588V12.4122C0 5.56036 4.23081 0 9.44429 0H822L1032 542H1224V88L1366.55 87.945C1371.76 87.945 1375.99 93.5054 1375.99 100.357H1376Z" fill="#41A280"/>
 					<rect
-						class="animate__animated"
-						data-anim="heightOut"
-            data-duration="400"
-						style="opacity: 1;"
+						class="animate__animated animate__heightOut"
+						style="animation-duration: 400ms; opacity: 1"
 						width="987.27"
 						height="542"
 						fill="#F4EFE5">
 					</rect>
 					<rect
-						class="animate__animated"
-						data-anim="heightOut"
-            data-delay="390"
-            data-duration="300"
-						style="opacity: 1;"
+						class="animate__animated animate__heightOut"
+						style="animation-duration: 300ms; animation-delay: 390ms; opacity: 1"
 						x="987.275"
 						y="335.25"
 						width="236.73"
@@ -29,11 +24,8 @@
 						fill="#F4EFE5">
 					</rect>
 					<rect
-						class="animate__animated"
-						data-anim="heightOut"
-            data-delay="680"
-            data-duration="300"
-						style="opacity: 1;"
+						class="animate__animated animate__heightOut"
+						style="animation-duration: 300ms; animation-delay: 680ms; opacity: 1"
 						x="1224"
 						y="88"
 						width="152"
@@ -47,15 +39,13 @@
 			</div>
 			<div class="desc">
 				<h1
-					class="animate__animated"
-					data-anim="fadeInUp"
-					data-delay="1000">
+					class="animate__animated animate__fadeInUp"
+					style="animation-delay: 1000ms">
 					Has your business been <br> impacted by the restrictions <br> and impacts of COVID-19?
 				</h1>
 				<div 
-					class="column animate__animated"
-					data-anim="fadeInUp"
-					data-delay="1000">
+					class="column animate__animated animate__fadeInUp"
+					style="animation-delay: 1000ms">
 					<p>Our professionals do all the hard work so you can sleep at night knowing it was done right</p>
 					<button class="custom">Check eligibility</button>
 				</div>
@@ -149,7 +139,6 @@ export default {
 	.column {
 		position: relative;
 		display: grid;
-		
 		max-width: 300px;
 		width: 100%;
 		margin: 0 auto;

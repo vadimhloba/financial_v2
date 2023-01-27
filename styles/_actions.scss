@@ -47,6 +47,7 @@
 		}
 		&:disabled {
 			opacity: 0.5;
+			cursor: default;
 		}
 	}
 	&.red {
@@ -79,6 +80,8 @@
 --------------------------- */
 .read-more {
 	display: flex;
+	align-items: center;
+	padding: 0;
 	svg {
 		margin-left: 4px;
 		transition: .2s;

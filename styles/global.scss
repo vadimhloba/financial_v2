@@ -6,6 +6,7 @@
 	--white: #FAFAFA;
 	--black: #0E0E11;
 	--blue: #1D3C86;
+	--lightblue: #D5D4D4;
 	--lightgreen: #41A280;
 	--red: #DC5750;
 	--darkred: rgb(185, 50, 50);
@@ -118,7 +119,7 @@ p, a, li {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 140%;
-	@media (min-width: 992px) {
+	@media (min-width: 1440px) {
 		font-size: 20px;
 		line-height: 140%;
 	}

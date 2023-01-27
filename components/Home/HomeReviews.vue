@@ -36,7 +36,7 @@
 							data-anim="fadeInRight"
 							data-delay="50">
 							<h1 class="cost"><span class="regular">$</span>200,500</h1>
-							<p class="mediium">received to our clients</p>
+							<p class="medium">received to our clients</p>
 						</div>
 						<div
 							class="box animate__animated"
@@ -165,10 +165,10 @@ export default {
 						margin-top: 11px;
 					}
 					span {
-						margin-right: 8px;
+						margin-right: 12px;
 					}
 					h2 {
-						margin-left: 10px;
+						margin-left: 12px;
 						@media(min-width:1440px) {
 							margin-bottom: 8px;
   					}

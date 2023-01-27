@@ -18,6 +18,6 @@
 
 <style lang="scss" scoped>
 .about-us_page {
-	padding: 160px 0;
+	padding: 0;
 }
 </style>

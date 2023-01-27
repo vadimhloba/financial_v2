@@ -72,7 +72,8 @@
 			<button
 				class="custom green tab-btn animate__animated"
 				data-anim="fadeInUp"
-				data-delay="1000">Check eligibility</button>
+				data-delay="1000">Check eligibility
+			</button>
 		</div>
 	</section>
 

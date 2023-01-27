@@ -72,10 +72,10 @@ export default {
 
 <style lang="scss" scoped>
 .how-it-works {
-	padding-bottom: 80px;
+	margin-top: 80px;
 	background-color: var(--green);
 	@media(min-width:992px) {
-		padding-bottom: 160px;
+		margin-top: 160px;
   }
 	.container {
 		padding-top: 80px;

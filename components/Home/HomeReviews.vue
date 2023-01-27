@@ -6,11 +6,12 @@
 				<h1>Client review</h1>
 				<div class="link">
 					<div>
-						<a href="#" class="next-review">
+						<button class="next-review">
 							<p class="medium">Next review</p>
 							<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#DC5750"/>
-							</svg></a>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -41,7 +42,7 @@
 							class="box animate__animated"
 							data-anim="fadeInRight"
 							data-delay="50">
-							<div style="display: flex">
+							<div>
 								<h1>4</h1>
 								<h2 class="regular">months</h2>
 							</div>
@@ -51,19 +52,22 @@
 				</div>
 				<div class="row-two">
 					<div class="video">
-						<img src="/img/reviews/review-two.png">
-						<a><svg width="49" height="58" viewBox="0 0 49 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<a>
+							<img src="/img/reviews/review-two.png">
+							<svg width="49" height="58" viewBox="0 0 49 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M46.1043 33.3565L8.18522 56.4315C4.9672 58.3877 0.837402 56.019 0.837402 52.0752V5.92522C0.837402 1.98772 4.96124 -0.387279 8.18522 1.57522L46.1043 24.6502C46.8363 25.0885 47.4448 25.722 47.868 26.4865C48.2912 27.251 48.5142 28.1193 48.5142 29.0033C48.5142 29.8874 48.2912 30.7557 47.868 31.5202C47.4448 32.2847 46.8363 32.9182 46.1043 33.3565Z" fill="#FAFAFA"/>
-							</svg></a>
+							</svg>
+						</a>
 					</div>
 					<div class="video-desc">
-						<h3>Tom Hardy</h3>
-						<p class="medium">CEO Chess.com</p>
-						<div>
-							<h2 class="regular">$</h2>
-							<h1>200,500</h1>
+						<div class="box">
+							<h3>Tom Hardy</h3>
+							<p class="medium">CEO Chess.com</p>
 						</div>
-						<p class="mediium">received to our clients</p>
+						<div class="box">
+							<h1 class="cost"><span class="regular">$</span>200,500</h1>
+							<p class="mediium">received to our clients</p>
+						</div>
 						<div>
 							<h1>4</h1>
 							<h2 class="regular">months</h2>
@@ -79,15 +83,15 @@
 
 <script scoped>
 export default {
-	name: 'HomeReviews'
+	name: 'HomeReviews',
 }
 </script>
 
 <style lang="scss" scoped>
 .client-review {
-	padding-bottom: 80px;
+	padding-top: 80px;
 	@media(min-width:992px) {
-		padding-bottom: 160px;
+		padding-top: 160px;
   }
 	.col-one {
 		display: grid;
@@ -96,16 +100,12 @@ export default {
 		margin-bottom: 32px;
 		.link {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
 			justify-content: end;
+			@media(min-width:992px) {
+				grid-template-columns: repeat(4, 1fr);
+  		}
 			& div {
 				grid-column: 2;
-				display: flex;
-				align-items: center;
-				a {
-					color: var(--red);
-					margin-right: 4px;
-				}
 			}
 		}
 	}
@@ -113,23 +113,34 @@ export default {
 		display: flex;
 		overflow-x: auto;
 		.row-one, .row-two {
-			min-width: 1000px;
-			display: flex;
+			min-width: 345px;
+			display: block;
 			overflow: hidden;
 			border-radius: 10px;
 			margin-right: 32px;
+			@media(min-width:768px) {
+				min-width: 654px;
+  		}
+			@media(min-width:992px) {
+				min-width: 1000px;
+				display: flex;
+  		}
 			.video {
 				position: relative;
-				a {
+				a svg {
 					position: absolute;
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
 				}
 				img {
-					min-width: 656px;
+					min-width: 311px;
 					width: 100%;
-					min-height: 332px;
+					min-height: 218px;
+					@media(min-width:768px) {
+						min-width: 656px;
+						min-height: 332px;
+  				}
 				}
 			}
 			.video-desc {
@@ -141,6 +152,15 @@ export default {
 				div {
 					display: flex;
 					align-items: end;
+					@media(min-width:992px) {
+						margin-top: 30px;
+						&:first-child {
+							margin-top: 0;
+						}
+  				}
+					@media(min-width:1440px) {
+						margin-top: 0;
+  				}
 					h1 {
 						margin-top: 11px;
 					}
@@ -148,10 +168,10 @@ export default {
 						margin-right: 8px;
 					}
 					h2 {
-						margin-bottom: 8px;
-					}
-					& h2:last-child {
 						margin-left: 10px;
+						@media(min-width:1440px) {
+							margin-bottom: 8px;
+  					}
 					}
 				}
 			}

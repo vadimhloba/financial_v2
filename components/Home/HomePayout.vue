@@ -86,9 +86,9 @@ export default {
 
 <style lang="scss" scoped>
 .erc-payout {
-	margin-top: 80px;
+	padding-top: 80px;
 	@media(min-width:992px) {
-		margin-top: 160px;
+		padding-top: 160px;
   }
 	.tab-title, .tab-btn {
 		display: block;
@@ -102,7 +102,7 @@ export default {
 		margin-bottom: 32px;
 	}
 	.tab-btn {
-		margin-top: 24px;
+		margin-top: 36px;
 		width: 100%;
 	}
 	.wrapper {

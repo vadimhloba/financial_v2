@@ -248,9 +248,9 @@ export default {
 
 <style lang="scss" scoped>
 .faq {
-	padding-bottom: 80px;
+	padding-top: 80px;
 	@media(min-width:1440px) {
-		padding-bottom: 160px;
+		padding-top: 160px;
   }
 	h1 {
 		margin-bottom: 32px;

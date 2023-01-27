@@ -47,7 +47,11 @@
 <style lang="scss" scoped>
 footer {
 	padding: 80px 0 32px;
+	margin-top: 80px;
 	background-color: var(--green);
+	@media (min-width: 992px) {
+		margin-top: 160px;
+	}
 	h1, h2, h3, p, a {
 		color: var(--white);
 	}

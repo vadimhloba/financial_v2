@@ -76,9 +76,9 @@ export default {
 
 <style lang="scss" scoped>
 .why-us {
-	padding-bottom: 80px;
+	padding-top: 80px;
 	@media(min-width:992px) {
-		padding-bottom: 160px;
+		padding-top: 160px;
   }
 	h1 {
 		margin-bottom: 56px;

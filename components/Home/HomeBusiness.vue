@@ -73,7 +73,10 @@ export default {
 
 <style lang="scss" scoped>
 .business-impacted {
-	padding: 32px 0 160px;
+	padding-top: 16px;
+	@media(min-width:992px) {
+		padding-top: 32px
+  }
 	.container {
 		position: relative;
 		display: block;

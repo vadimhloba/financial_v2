@@ -93,9 +93,9 @@ export default {
 
 <style lang="scss" scoped>
 .our-philosophy {
-	padding-bottom: 80px;
+	padding-top: 80px;
 	@media(min-width:992px) {
-		padding-bottom: 160px;
+		padding-top: 160px;
 	}
 	.container {
 		display: grid;

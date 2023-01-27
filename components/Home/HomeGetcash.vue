@@ -52,9 +52,9 @@ export default {
 
 <style lang="scss" scoped>
 .get-cash {
-	padding: 80px 0;
+	padding-top: 80px;
 	@media(min-width:992px) {
-		padding: 160px 0;
+		padding-top: 160px;
   }
 	.col-one {
 		border-bottom: 2px solid var(--grayish);

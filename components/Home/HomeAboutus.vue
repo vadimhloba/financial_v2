@@ -27,7 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 .say-about-us{
-	padding-bottom: 160px;
+	padding-top: 80px;
+	@media(min-width:992px) {
+		padding-top: 160px;
+  }
 	.container {
 		display: block;
 	}

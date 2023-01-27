@@ -37,9 +37,9 @@ export default {
 
 <style lang="scss" scoped>
 .done-for-you {
-	padding-bottom: 80px;
+	padding-top: 80px;
 	@media(min-width:992px) {
-		padding-bottom: 160px;
+		padding-top: 160px;
 	}
 	.col-one {
 		border-bottom: 2px solid var(--grayish);

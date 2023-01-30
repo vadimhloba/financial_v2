@@ -18,7 +18,7 @@
 
 		<HomeHowitworks/>
 
-		<HomeGetcash/>
+		<Getcash/>
 
 		<HomeReviews/>
 

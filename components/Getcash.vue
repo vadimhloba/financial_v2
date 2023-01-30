@@ -46,7 +46,7 @@
 
 <script scoped>
 export default {
-	name: 'HomeGetcash'
+	name: 'Getcash'
 }
 </script>
 

@@ -67,6 +67,26 @@
 			color: var(--red);
 		}
 	}
+	&.blue {
+		background-color: var(--white);
+		color: var(--blue);
+		&:enabled {
+			border: 2px solid var(--blue);
+			color: var(--blue);
+		}
+		&:hover {
+			border: 2px solid var(--darkblue);
+			color: var(--darkblue);
+		}
+		&:focus {
+			border: 4px solid var(--darkblue);
+			color: var(--darkblue);
+		}
+		&:active {
+			border: 2px solid var(--blue);
+			color: var(--blue);
+		}
+	}
 }
 /* --------------------
     END button

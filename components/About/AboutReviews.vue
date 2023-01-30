@@ -19,15 +19,23 @@
 					</div>
 					<div class="block">
 						<div class="row-one red">
-							<div class="box">
+							<div
+								data-anim="fadeInRight"
+								data-delay="50"
+								class="box animate__animated">
 								<h3>Selena Giri</h3>
 								<p class="medium">CEO Chess.com</p>
 							</div>
-							<div class="box">
+							<div data-anim="fadeInRight"
+								data-delay="50"
+								class="box animate__animated">
 								<h1><span class="regular">$</span>200,500</h1>
 								<p class="medium">received to our clients</p>
 							</div>
-							<div class="box">
+							<div
+								data-anim="fadeInRight"
+								data-delay="50"
+								class="box animate__animated">
 								<div>
 									<h1>4</h1>
 									<h2 class="regular">months</h2>

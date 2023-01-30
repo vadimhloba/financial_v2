@@ -12,48 +12,60 @@
 				</button>
 			</div>
 			<div class="col-two">
-				<div class="block red">
-					<div class="row-one">
-						<div class="box">
-							<h3>Selena Giri</h3>
-							<p class="medium">CEO Chess.com</p>
-						</div>
-						<div class="box">
-							<h1><span class="regular">$</span>200,500</h1>
-							<p class="medium">received to our clients</p>
-						</div>
-						<div class="box">
-							<div>
-								<h1>4</h1>
-								<h2 class="regular">months</h2>
-							</div>
-							<p>from call to receiving money</p>
-						</div>
+				<div class="block-tab">
+					<div class="box-tab">
+						<h3>Selena Giri</h3>
+						<p class="medium">CEO Chess.com</p>
 					</div>
-					<div class="row-two">
-						<p class="medium">Our association with Financial Match have helped our short term visions delivered in form of reality thereby setting the perfect platform for medium and long terms objectives. With a superior and well structured team of leaders and advisors every project is treated distinctively with a progressive mindset and a methodology which is resourceful. Surely working with the team of Financial Match especially the driving leadership at the top has been an enriching experience both at a professional and personal level.</p>
+					<div class="block">
+						<div class="row-one red">
+							<div class="box">
+								<h3>Selena Giri</h3>
+								<p class="medium">CEO Chess.com</p>
+							</div>
+							<div class="box">
+								<h1><span class="regular">$</span>200,500</h1>
+								<p class="medium">received to our clients</p>
+							</div>
+							<div class="box">
+								<div>
+									<h1>4</h1>
+									<h2 class="regular">months</h2>
+								</div>
+								<p>from call to receiving money</p>
+							</div>
+						</div>
+						<div class="row-two">
+							<p class="medium">Our association with Financial Match have helped our short term visions delivered in form of reality thereby setting the perfect platform for medium and long terms objectives. With a superior and well structured team of leaders and advisors every project is treated distinctively with a progressive mindset and a methodology which is resourceful. Surely working with the team of Financial Match especially the driving leadership at the top has been an enriching experience both at a professional and personal level.</p>
+						</div>
 					</div>
 				</div>
-				<div class="block blue">
-					<div class="row-one">
-						<div class="box">
-							<h3>Luka Doncic</h3>
-							<p class="medium">Wilson.com</p>
-						</div>
-						<div class="box">
-							<h1><span class="regular">$</span>713,000</h1>
-							<p class="medium">received to our clients</p>
-						</div>
-						<div class="box">
-							<div>
-								<h1>4</h1>
-								<h2 class="regular">months</h2>
-							</div>
-							<p>from call to receiving money</p>
-						</div>
+				<div class="block-tab">
+					<div class="box-tab">
+						<h3>Luka Doncic</h3>
+						<p class="medium">Wilson.com</p>
 					</div>
-					<div class="row-two">
-						<p class="medium">Our association with Financial Match have helped our short term visions delivered in form of reality thereby setting the perfect platform for medium and long terms objectives. With a superior and well structured team of leaders and advisors every project is treated distinctively with a progressive mindset and a methodology which is resourceful. Surely working with the team of Financial Match especially the driving leadership at the top has been an enriching experience both at a professional and personal level.</p>
+					<div class="block">
+						<div class="row-one blue">
+							<div class="box">
+								<h3>Luka Doncic</h3>
+								<p class="medium">Wilson.com</p>
+							</div>
+							<div class="box">
+								<h1><span class="regular">$</span>713,000</h1>
+								<p class="medium">received to our clients</p>
+							</div>
+							<div class="box">
+								<div>
+									<h1>4</h1>
+									<h2 class="regular">months</h2>
+								</div>
+								<p>from call to receiving money</p>
+							</div>
+						</div>
+						<div class="row-two">
+							<p class="medium">Our association with Financial Match have helped our short term visions delivered in form of reality thereby setting the perfect platform for medium and long terms objectives. With a superior and well structured team of leaders and advisors every project is treated distinctively with a progressive mindset and a methodology which is resourceful. Surely working with the team of Financial Match especially the driving leadership at the top has been an enriching experience both at a professional and personal level.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -83,30 +95,67 @@ export default {
 	.col-two {
 		display: flex;
 		overflow-x: auto;
-		.block {
-			display: flex;
-			min-width: 1000px;
-			border-radius: 10px;
-			overflow: hidden;
+		.block-tab {
 			margin-right: 32px;
 			&:last-child {
 				margin-right: 0;
 			}
-			&.red {
-				background: var(--red);
+		}
+		.box-tab {
+			display: block;
+			margin-bottom: 16px;
+			@media (min-width: 992px) {
+				display: none;
 			}
-			&.blue {
-				background: var(--blue);
+		}
+		.block {
+			overflow: hidden;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			min-width: 380px;
+			border-radius: 10px;
+			@media (min-width: 576px) {
+				min-width: 500px;
+			}
+			@media (min-width: 992px) {
+				min-width: 1000px;
+				flex-direction: row;
 			}
 			.row-one {
+				display: flex;
+				justify-content: space-between;
+				order: 2;
+				position: relative;
 				color: var(--white);
-				width: 100%;
-				max-width: 344px;
-				padding: 32px 63px 32px 32px;
+				padding: 16px;
+				@media (min-width: 992px) {
+					display: block;
+					order: 1;
+					width: 100%;
+					max-width: 344px;
+					padding: 32px 63px 32px 32px;
+				}
+				&.red {
+					background: var(--red);
+				}
+				&.blue {
+					background: var(--blue);
+				}
 				.box {
-					margin-bottom: 23px;
+					max-width: 160px;
+					@media (min-width: 992px) {
+						margin-bottom: 23px;
+						max-width: 100%;
+					}
 					&:last-child {
 						margin-bottom: 0;
+					}
+					&:first-child {
+						display: none;
+						@media (min-width: 992px) {
+							display: block;
+						}
 					}
 					div {
 						display: flex;
@@ -114,6 +163,12 @@ export default {
 						h2 {
 							margin-bottom: 8px;
 							margin-left: 12px;
+							@media (min-width: 992px) {
+								margin-bottom: 0;
+							}
+							@media (min-width: 1440px) {
+								margin-bottom: 8px;
+							}
 						}
 					}
 					span {
@@ -122,10 +177,15 @@ export default {
 				}
 			}
 			.row-two {
-				width: 100%;
-				max-width: 656px;
+				order: 1;
+				position: relative;
 				padding: 32px;
 				background: var(--lightblue);
+				@media (min-width: 992px) {
+					order: 2;
+					width: 100%;
+					max-width: 656px;
+				}
 			}
 		}
 	}

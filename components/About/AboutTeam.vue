@@ -2,7 +2,9 @@
 
 	<section class="our-team">
 		<div class="container">
-			<h1>Our Team</h1>
+			<div class="title">
+				<h1>Our Team</h1>
+			</div>
 			<div class="col-one">
 				<div class="links">
 					<a>CEO</a>
@@ -84,10 +86,25 @@ export default {
 	@media (min-width: 992px) {
 		padding-top: 160px;
 	}
+	.container {
+		position: relative;
+	}
 	.col-one {
-		display: flex;
+		display: block;
 		align-items: center;
 		justify-content: space-between;
+		@media (min-width: 576px) {
+			display: flex;
+		}
+		.read-more {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 10px 15px;
+			@media (min-width: 576px) {
+				position: relative;
+			}
+		}
 		.links {
 			padding: 32px 0 24px;
 			a {
@@ -103,9 +120,12 @@ export default {
 		overflow-x: auto;
 		.block {
 			display: block;
-			min-width: 344px;
+			min-width: 172px;
 			margin-right: 2px;
 			overflow: hidden;
+			@media (min-width: 992px) {
+				min-width: 344px;
+			}
 			&:first-child {
 				border-radius: 10px 0px 0px 10px;
 			}
@@ -115,10 +135,22 @@ export default {
 			}
 			.block-desc {
 				color: var(--white);
-				padding: 24px;
+				padding: 8px;
 				background: var(--lightgreen);
+				@media (min-width: 992px) {
+					padding: 24px;
+				}
 				p {
-					margin-top: 4px;
+					font-size: 12px;
+					@media (min-width: 992px) {
+						font-size: 16px;
+					}
+				}
+				h3 {
+					font-size: 16px;
+					@media (min-width: 992px) {
+						font-size: 20px;
+					}
 				}
 			}
 			img {

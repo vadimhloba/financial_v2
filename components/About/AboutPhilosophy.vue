@@ -46,6 +46,10 @@
 					<p>Our beliefs are grounded in latest and most advanced scientific research that explore the effects that emotions have on our entire being originating from cells in particular, on our chromosomes and mitochondrial DNA.</p>
 				</div>
 			</div>
+			<div class="desc-tab">
+				<p>Through our observations and learnings, we have created a logical and sequential Financial Match set of Values and Principles, across Emotional, Intellectual and Physical dimensions that human beings operate in</p><br>
+				<p>Our beliefs are grounded in latest and most advanced scientific research that explore the effects that emotions have on our entire being originating from cells in particular, on our chromosomes and mitochondrial DNA.</p>
+			</div>
 		</div>
 	</section>
 
@@ -89,8 +93,10 @@ export default {
 		position: relative;
     padding: 16px 0;
     max-width: 100%;
+		display: none;
 		@media(min-width:992px) {
   	  padding: 32px;
+			display: block;
   	}
 		h1, p {
 			color: var(--white);
@@ -126,6 +132,14 @@ export default {
 					margin-right: 32px;
 				}
 			}
+		}
+	}
+	.desc-tab {
+		display: block;
+		padding-left: 86px;
+		padding-top: 24px;
+		@media (min-width: 992px) {
+			display: none;
 		}
 	}
 }

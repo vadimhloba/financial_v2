@@ -54,7 +54,6 @@
 							v-model="form.name"
 							type="text"
 							id="name"
-							minlength="2"
 							required>
 						<label
 							class="not-empty"
@@ -115,8 +114,7 @@ export default {
         company: '',
         email: '',
         phone: '',
-      },
-      valid: false
+      }
 		}
 	},
 	method: {
@@ -127,7 +125,7 @@ export default {
 		    e.target.classList.remove('not-empty')
 		  }
 
-			if(this.form.name.length > 1 && this.form.company.length > 1 && this.form.email.length > 1 && this.form.phone.length > 8){
+			if(this.form.name.length > 1 && this.form.company.length > 1 && this.form.phone.length > 8){
 				this.valid = true
 			} else {
 				this.valid = false
@@ -148,13 +146,23 @@ export default {
 	}
 	.wrapper {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
+		@media (min-width: 992px) {
+			flex-direction: row;
+		}
 		.col-one {
-			width: calc((100% / 2) - 16px);
-			margin-right: 32px;
+			width: 100%;
+			@media (min-width: 992px) {
+				width: calc((100% / 2) - 16px);
+				margin-right: 32px;
+			}
 		}
 		.col-two {
-			width: calc((100% / 2) - 16px);
+			width: 100%;
+			@media (min-width: 992px) {
+				width: calc((100% / 2) - 16px);
+			}
 			.contuctus-field {
 				position: relative;
 				height: 60px;
@@ -165,7 +173,6 @@ export default {
 					font-weight: 600;
 					font-size: 20px;
 					line-height: 140%;
-					color: var(--text-black);
 					display: block;
 					width: 100%;
 					background: none;
@@ -193,6 +200,10 @@ export default {
 			}
 			input[type=submit] {
 				margin-top: 62px;
+				width: 100%;
+				@media (min-width: 992px) {
+					width: 186px;
+				}
 			}
 		}
 	}

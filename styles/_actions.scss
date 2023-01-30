@@ -12,10 +12,6 @@
 	border-radius: 8px;
 	cursor: pointer;
 	transition: .4s;
-	&:enabled {
-		border: 2px solid var(--lightgreen);
-		color: var(--lightgreen);
-	}
 	&:hover {
 		border: 2px solid var(--green);
 		color: var(--green);
@@ -28,12 +24,13 @@
 		border: 2px solid var(--lightgreen);
 		color: var(--lightgreen);
 	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
 	&.green {
 		background-color: var(--lightgreen);
 		color: var(--white);
-		&:enabled {
-			background-color: var(--lightgreen);
-		}
 		&:hover {
 			background-color: var(--green);
 		}
@@ -45,18 +42,10 @@
 			border: 2px solid var(--lightgreen);
 			background-color: var(--lightgreen);
 		}
-		&:disabled {
-			opacity: 0.5;
-			cursor: default;
-		}
 	}
 	&.red {
 		background-color: var(--white);
 		color: var(--red);
-		&:enabled {
-			border: 2px solid var(--red);
-			color: var(--red);
-		}
 		&:hover {
 			border: 2px solid var(--darkred);
 			color: var(--darkred);

@@ -49,22 +49,55 @@
 				</div>
 				<form class="col-two">
 					<div class="contuctus-field">
-						<input type="text" id="name" minlength="2" required>
-						<label for="name">Name</label>
+						<input
+							@change="checkEmpty"
+							v-model="form.name"
+							type="text"
+							id="name"
+							minlength="2"
+							required>
+						<label
+							class="not-empty"
+							for="name">Name</label>
 					</div>
 					<div class="contuctus-field">
-						<input type="text" id="company" required>
-						<label for="company">Company name</label>
+						<input
+							@change="checkEmpty"
+							v-model="form.company"
+							type="text"
+							id="company"
+							required>
+						<label
+							class="not-empty"
+							for="company">Company name</label>
 					</div>
 					<div class="contuctus-field">
-						<input type="text" id="email" required>
-						<label for="email">Email</label>
+						<input
+							@change="checkEmpty"
+							v-model="form.email"
+							type="text"
+							id="email"
+							required>
+						<label
+							class="not-empty"
+							for="email">Email</label>
 					</div>
 					<div class="contuctus-field">
-						<input type="text" id="phone" required>
-						<label for="phone">Phone</label>
+						<input
+							@change="checkEmpty"
+							v-model="form.phone"
+							type="text"
+							id="phone"
+							required>
+						<label
+							class="not-empty"
+							for="phone">Phone</label>
 					</div>
-					<input class="custom green" type="submit" value="Send">
+					<input
+						class="custom green"
+						type="submit"
+						value="Send"
+						:disabled="!valid">
 				</form>
 			</div>
 		</div>
@@ -74,7 +107,33 @@
 
 <script scoped>
 export default {
-	name: 'AboutContact'
+	name: 'AboutContact',
+	data() {
+		return {
+			form: {
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+      },
+      valid: false
+		}
+	},
+	method: {
+		checkEmpty(e){
+		  if(e.target.value.length > 0){
+		    e.target.classList.add('not-empty')
+		  } else {
+		    e.target.classList.remove('not-empty')
+		  }
+
+			if(this.form.name.length > 1 && this.form.company.length > 1 && this.form.email.length > 1 && this.form.phone.length > 8){
+				this.valid = true
+			} else {
+				this.valid = false
+			}
+		}
+	}
 }
 </script>
 
@@ -115,13 +174,8 @@ export default {
 					height: 36px;
 					padding: 0;
 					outline: none;
-					&:focus, &:valid {
-						label {
-							transform: translateY(-90%) scale(0.8);
-						}
-					}
 				}
-				label {
+				.not-empty {
 					font-weight: 400;
 					line-height: 140%;
 					font-size: 16px;
@@ -129,6 +183,12 @@ export default {
 					left: 0;
 					transition: .2s ease;
 					pointer-events: none;
+				}
+				input:focus + .not-empty, input:valid + .not-empty {
+  				color: var(--gray);
+  				transform: translateY(-30px);
+					line-height: 120%;
+					font-size: 14px;
 				}
 			}
 			input[type=submit] {

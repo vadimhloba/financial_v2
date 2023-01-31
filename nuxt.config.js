@@ -25,23 +25,24 @@ export default {
 		{ src: "~/plugins/mg-animation.client.js" },
 	],
 
-	router: {
-		base: '/',
-		mode: 'hstory',
-		extendRoutes(routes, resolve) {
-			routes.push({
-				name: 'error',
-				path: '*',
-				component: resolve(__dirname, 'pages/404.vue'),
-			})
-		}
-	},
+  router: {
+    base: '/',
+    mode: 'history',
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'error',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
+    }
+  },
 
   components: true,
 
-  buildModules: [],
-
-  modules: [],
-
-  build: {}
+  generate: {
+    dir: './dist_server'
+  },
+  build: {
+    target: 'static'
+  }
 }

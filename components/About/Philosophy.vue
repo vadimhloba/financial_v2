@@ -55,12 +55,6 @@
 
 </template>
 
-<script scoped>
-export default {
-	name: 'AboutPhilosophy'
-}
-</script>
-
 <style lang="scss" scoped>
 .our-philosophy {
 	padding-top: 16px;

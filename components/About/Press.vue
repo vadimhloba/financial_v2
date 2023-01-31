@@ -78,12 +78,6 @@
 
 </template>
 
-<script scoped>
-export default {
-	name: 'AboutPress'
-}
-</script>
-
 <style lang="scss" scoped>
 .press-about-us {
 	padding-top: 80px;

@@ -102,9 +102,9 @@
 
 <script scoped>
 export default {
-	name: 'AboutContact',
 	data() {
 		return {
+			valid: false,
 			form: {
         name: '',
         company: '',

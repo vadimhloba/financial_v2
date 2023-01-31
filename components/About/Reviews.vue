@@ -82,12 +82,6 @@
 
 </template>
 
-<script scoped>
-export default {
-	name: 'AboutReviews'
-}
-</script>
-
 <style lang="scss" scoped>
 .client-review {
 	padding-top: 80px;

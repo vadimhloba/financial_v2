@@ -46,11 +46,10 @@
 							</clipPath>
 						</defs>
 					</svg>
-				</div>
+				</div>	
 				<form class="col-two">
 					<div class="contuctus-field">
 						<input
-							@change="checkEmpty"
 							v-model="form.name"
 							type="text"
 							id="name"
@@ -61,7 +60,6 @@
 					</div>
 					<div class="contuctus-field">
 						<input
-							@change="checkEmpty"
 							v-model="form.company"
 							type="text"
 							id="company"
@@ -72,7 +70,6 @@
 					</div>
 					<div class="contuctus-field">
 						<input
-							@change="checkEmpty"
 							v-model="form.email"
 							type="text"
 							id="email"
@@ -83,7 +80,6 @@
 					</div>
 					<div class="contuctus-field">
 						<input
-							@change="checkEmpty"
 							v-model="form.phone"
 							type="text"
 							id="phone"
@@ -93,7 +89,7 @@
 							for="phone">Phone</label>
 					</div>
 					<input
-						class="custom green"
+						class="green-contact"
 						type="submit"
 						value="Send"
 						:disabled="!valid">

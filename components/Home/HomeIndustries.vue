@@ -8,7 +8,7 @@
 			<div class="col-two">
 				<div class="row-one">
 					<h2 class="regular desc">We've helped clients of all sizes and across multiple different industries</h2>
-					<button class="custom green">Check eligibility</button>
+					<BtnEligibility class="green">Check eligibility</BtnEligibility>
 				</div>
 				<div class="row-two">
 					<div>
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 			</div>
-			<button class="custom green tab-appear">Check eligibility</button>
+			<BtnEligibility class="green tab-appear">Check eligibility</BtnEligibility>
 		</div>
 	</section>
 
@@ -45,7 +45,7 @@
 
 <script scoped>
 export default {
-	name: 'HomIndustries'
+  name: "HomIndustries",
 }
 </script>
 
@@ -70,7 +70,7 @@ export default {
 			grid-template-columns: repeat(2, 1fr);
   	}
 		.row-one {
-			button {
+			.green {
 				display: none;
 				@media(min-width:992px) {
 					display: block;

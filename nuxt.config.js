@@ -19,26 +19,29 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
 	css: ["~/styles/global.scss"],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
 		{ src: "~/plugins/mg-animation.client.js" },
 	],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+	router: {
+		base: '/',
+		mode: 'hstory',
+		extendRoutes(routes, resolve) {
+			routes.push({
+				name: 'error',
+				path: '*',
+				component: resolve(__dirname, 'pages/404.vue'),
+			})
+		}
+	},
+
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+  buildModules: [],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {}
 }

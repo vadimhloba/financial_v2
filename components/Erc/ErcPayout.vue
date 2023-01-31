@@ -54,7 +54,7 @@
 					data-anim="fadeInUp"
 					data-delay="1000">
 					<h1 class="title move">Estimate your ERC Payout</h1>
-					<button class="custom blue">Check eligibility</button>
+					<BtnEligibility class="blue">Check eligibility</BtnEligibility>
 				</div>
 				<div class="pay-cost animate__animated"
 					data-anim="fadeInUp"
@@ -69,11 +69,11 @@
 					</div>
 				</div>
 			</div>
-			<button
-				class="custom green tab-btn animate__animated"
+			<BtnEligibility
+				class="green tab-btn animate__animated"
 				data-anim="fadeInUp"
-				data-delay="1000">Check eligibility
-			</button>
+				data-delay="1000">
+			</BtnEligibility>
 		</div>
 	</section>
 

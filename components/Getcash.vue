@@ -5,7 +5,7 @@
 			<div class="col-one">
 				<h3>Most business owners don't realize they can qualify to</h3>
 				<h1>Get <span class="regular">$</span>26,000 cash <br> for each W2 employee</h1>
-				<button class="custom green">Check eligibility</button>
+				<BtnEligibility class="green">Check eligibility</BtnEligibility>
 			</div>
 			<div class="col-two">
 				<div class="row-one">
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 			</div>
-			<button class="custom green tab-appear">Check eligibility</button>
+			<BtnEligibility class="green tab-appear">Check eligibility</BtnEligibility>
 		</div>
 	</section>
 
@@ -58,7 +58,7 @@ export default {
   }
 	.col-one {
 		border-bottom: 2px solid var(--grayish);
-		button {
+		.green {
 			display: none;
 			margin-bottom: 38px;
 			@media(min-width:992px) {

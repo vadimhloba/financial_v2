@@ -1,7 +1,39 @@
 /* --------------------
     START button
 -------------------- */
-.custom {
+.black {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 186px;
+	padding: 16px 0 13px;
+	border: none;
+	background: var(--white);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: .4s;
+	&:enabled {
+		border: 2px solid var(--black);
+		color: var(--black);
+	}
+	&:hover {
+		border: 2px solid var(--gray);
+		color: var(--gray);
+	}
+	&:focus {
+		border: 4px solid var(--gray);
+		color: var(--gray);
+	}
+	&:active {
+		border: 2px solid var(--black);
+		color: var(--black);
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
+.custom button {
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 140%;
@@ -32,60 +64,113 @@
 		opacity: 0.5;
 		cursor: default;
 	}
-	&.green {
+}
+.green button {
+	background-color: var(--lightgreen);
+	color: var(--white);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 100%;
+	padding: 16px 0 13px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	@media (min-width: 992px) {
+		width: 186px;
+	}
+	&:hover {
+		background-color: var(--green);
+	}
+	&:focus {
+		border: 2px solid var(--black);
 		background-color: var(--lightgreen);
-		color: var(--white);
-		&:hover {
-			background-color: var(--green);
-		}
-		&:focus {
-			border: 2px solid var(--black);
-			background-color: var(--lightgreen);
-		}
-		&:active {
-			border: 2px solid var(--lightgreen);
-			background-color: var(--lightgreen);
-		}
 	}
-	&.red {
-		background-color: var(--white);
+	&:active {
+		border: 2px solid var(--lightgreen);
+		background-color: var(--lightgreen);
+	}
+}
+.green-contact {
+	background-color: var(--lightgreen);
+	color: var(--white);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 100%;
+	padding: 16px 0 13px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	@media (min-width: 992px) {
+		width: 186px;
+	}
+	&:hover {
+		background-color: var(--green);
+	}
+	&:focus {
+		border: 2px solid var(--black);
+		background-color: var(--lightgreen);
+	}
+	&:active {
+		border: 2px solid var(--lightgreen);
+		background-color: var(--lightgreen);
+	}
+}
+.red button {
+	background-color: var(--white);
+	color: var(--red);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 186px;
+	padding: 16px 0 13px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	&:enabled {
+		border: 2px solid var(--red);
 		color: var(--red);
-		&:enabled {
-			border: 2px solid var(--red);
-			color: var(--red);
-		}
-		&:hover {
-			border: 2px solid var(--darkred);
-			color: var(--darkred);
-		}
-		&:focus {
-			border: 4px solid var(--darkred);
-			color: var(--darkred);
-		}
-		&:active {
-			border: 2px solid var(--red);
-			color: var(--red);
-		}
 	}
-	&.blue {
-		background-color: var(--white);
+	&:hover {
+		border: 2px solid var(--darkred);
+		color: var(--darkred);
+	}
+	&:focus {
+		border: 4px solid var(--darkred);
+		color: var(--darkred);
+	}
+	&:active {
+		border: 2px solid var(--red);
+		color: var(--red);
+	}
+}
+.blue button {
+	background-color: var(--white);
+	color: var(--blue);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 186px;
+	padding: 16px 0 13px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	&:enabled {
+		border: 2px solid var(--blue);
 		color: var(--blue);
-		&:enabled {
-			border: 2px solid var(--blue);
-			color: var(--blue);
-		}
-		&:hover {
-			border: 2px solid var(--darkblue);
-			color: var(--darkblue);
-		}
-		&:focus {
-			border: 4px solid var(--darkblue);
-			color: var(--darkblue);
-		}
-		&:active {
-			border: 2px solid var(--blue);
-			color: var(--blue);
-		}
+	}
+	&:hover {
+		border: 2px solid var(--darkblue);
+		color: var(--darkblue);
+	}
+	&:focus {
+		border: 4px solid var(--darkblue);
+		color: var(--darkblue);
+	}
+	&:active {
+		border: 2px solid var(--blue);
+		color: var(--blue);
 	}
 }
 /* --------------------

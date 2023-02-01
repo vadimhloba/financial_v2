@@ -20,22 +20,26 @@
 					<div class="block">
 						<div class="row-one red">
 							<div
+								class="box animate__animated"
 								data-anim="fadeInRight"
-								data-delay="50"
-								class="box animate__animated">
+								data-delay="100"
+								data-parent="4">
 								<h3>Selena Giri</h3>
 								<p class="medium">CEO Chess.com</p>
 							</div>
-							<div data-anim="fadeInRight"
-								data-delay="50"
-								class="box animate__animated">
+							<div
+								class="box animate__animated"
+								data-anim="fadeInRight"
+								data-delay="100"
+								data-parent="4">
 								<h1><span class="regular">$</span>200,500</h1>
 								<p class="medium">received to our clients</p>
 							</div>
 							<div
+								class="box animate__animated"
 								data-anim="fadeInRight"
-								data-delay="50"
-								class="box animate__animated">
+								data-delay="100"
+								data-parent="4">
 								<div>
 									<h1>4</h1>
 									<h2 class="regular">months</h2>

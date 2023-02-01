@@ -7,10 +7,10 @@
 			</svg>
 			<h1 class="huge">404</h1>
 			<h2>page not found</h2>
-			<button class="black">Back Home</button>
+			<nuxt-link to="/" class="black">Back Home</nuxt-link>
 		</div>
 		<div class="container">
-			<button class="green-contact">Back Home</button>
+			<nuxt-link to="/" class="green-contact">Back Home</nuxt-link>
 		</div>
 	</section>
 
@@ -19,13 +19,15 @@
 <script>
 export default {
   name: 'errorPage',
+	layout: 'empty'
 }
 </script>
 
 <style lang="scss" scoped>
 	.error {
-		padding-top: 64px;
-		padding-bottom: 64px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 		.container {
 			position: relative;
 		}

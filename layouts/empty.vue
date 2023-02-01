@@ -1,14 +1,12 @@
 <template>
   <main>
-    <errorPage/>
+    <Nuxt/>
   </main>
 </template>
 
 <script>
-import errorPage from '@/pages/404.vue'
 
 export default{
-	name: 'empty',
-	components: {errorPage},
+	layout: 'empty'
 }
 </script>

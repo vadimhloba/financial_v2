@@ -47,7 +47,7 @@
 					class="column animate__animated animate__fadeInUp"
 					style="animation-delay: 1000ms">
 					<p>Our professionals do all the hard work so you can sleep at night knowing it was done right</p>
-					<BtnEligibility class="custom" />
+					<BtnEligibility class="custom"/>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 
 <script scoped>
 export default {
-    name: "HomeBusiness",
+  name: "HomeBusiness",
 }
 </script>
 

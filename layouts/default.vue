@@ -2,6 +2,8 @@
   <main>
     <Header/>
     <Nuxt/>
+		<Quiz v-if="quiz" />
+		<Thanks v-if="thanks" />
     <Footer/>
   </main>
 </template>
@@ -17,5 +19,9 @@ export default{
       this.$mgAnimation()
     }
   },
+	computed: {
+		quiz(){ return this.$store.getters.getQuiz },
+		thanks(){ return this.$store.getters.getThanks }
+	}
 }
 </script>

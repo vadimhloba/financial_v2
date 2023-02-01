@@ -8,7 +8,7 @@
 				</svg>
 				<p class="medium">Back</p>
 			</button>
-			<button class="quiz--close">
+			<button @click="$store.commit('setQuiz', false)" class="quiz--close">
 				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="quiz--close">
 					<g clip-path="url(#clip0_31_2381)">
 						<path d="M28.6663 19.333L19.333 28.6663M19.333 19.333L28.6664 28.6663" stroke="#0E0E11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

@@ -1,19 +1,13 @@
 <template>
 
 	<div>
-		<button @click="showQuiz = true">Check eligibility</button>
-		<Quiz v-if="showQuiz" @close="showQuiz = false"/>
+		<button @click="$store.commit('setQuiz', true)">Check eligibility</button>
 	</div>
 
 </template>
 
 <script scoped>
 export default {
-	name: 'BtnEligibility',
-	data() {
-		return {
-			showQuiz: false
-		}
-	}
+	name: 'BtnEligibility'
 }
 </script>

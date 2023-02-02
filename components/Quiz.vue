@@ -27,30 +27,39 @@
 				</svg>
 			</button>
 
-			<div class="quiz--item">
+			<Thanks v-if="quiz.length === step"/>
+
+			<div v-else class="quiz--item">
 				<h2 v-html="quiz[step].question"></h2>
 				<p v-html="quiz[step].desription" class="medium"></p>
+
 				<button class="link">
 					<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
 					</svg>
 					<p>Back to the main page</p>
 				</button>
+
 				<div class="quiz--options">
+
 					<p v-html="quiz[step].post" class="medium"></p>
-					<input type="number" min="2" step="1" max="1000000">
+
+					<input v-if="items = 2" type="number" min="2" step="1" max="1000000">
+
 					<button
-						v-for="(item, index) in quiz[step].options"
+						v-for="(item, index) in quiz[step].choose"
 						@click="answer(item)"
 						:key="`button_${index}`">
 						{{ item }}
 					</button>
+
 					<form
 						v-if="step + 1 === quiz.length"
 						@submit.prevent="answer(quiz[step].answer)"
 						class="quiz--form">
 						<div class="field">
 							<input
+								v-model="quiz[step].answer"
 								type="text"
 								id="name"
 								required>
@@ -62,6 +71,7 @@
 						</div>
 						<div class="field">
 							<input
+								v-model="quiz[step].answer"
 								type="text"
 								id="company"
 								required>
@@ -73,6 +83,7 @@
 						</div>
 						<div class="field">
 							<input
+								v-model="quiz[step].answer"
 								type="text"
 								id="email"
 								required>
@@ -84,6 +95,7 @@
 						</div>
 						<div class="field">
 							<input
+								v-model="quiz[step].answer"
 								type="text"
 								id="phone"
 								required>
@@ -97,6 +109,7 @@
 							<input type="submit">
 						</div>
 					</form>
+
 					<p v-html="quiz[step].finishdesc"></p>
 				</div>
 			</div>
@@ -118,35 +131,96 @@ export default {
         company: '',
         email: '',
         phone: '',
-				quiz: [
-					{
+			},
+			quiz: {
+				items: {
+					1: {
 						question: 'I had W2 Employees in 2020 or 2021',
 						desription: 'Please Select One',
-						choose: ['Yes', 'No'],
+						choose: {
+							'Yes': 3,
+							'No': 'not',
+						},
+						answer: null
 					},
-					{
+					2: {
 						question: 'You Do Not Qualify for ERC',
 						desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
+						answer: 'not'
 					},
-					{
+					3: {
 						question: 'How Many W2 EmployeesDo You Have?',
 						post: 'number of employees',
 						choose: 'Next',
+						answer: 3
 					},
-					{
+					4: {
 						question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
-						choose: ['Yes', 'No'],
+						choose: {
+							'Yes': 6,
+							'No': 5,
+						},
+						answer: 3
 					},
-					{
+					5: {
 						question: 'Did You Receive PPP Money?',
-						choose: ['Yes', 'No'],
+						choose: {
+							'Yes': 8,
+							'No': 7,
+						},
+						answer: 5
 					},
-					{
+					6: {
 						question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
-						choose: ['Yes', 'No'],
+						choose: {
+							'Yes': 10,
+							'No': 9,
+						},
+						answer: 6
+					},
+					7: {
+						question: 'Enter info below to get your results',
+						answer: 7
+					},
+					8: {
+						question: 'Enter info below to get your results',
+						answer: 8
+					},
+					9: {
+						question: 'Enter info below to get your results',
+						answer: 9
+					},
+					10: {
+						question: 'Are you the owner or decision maker for this business?',
+						choose: {
+							'Yes': 11,
+							'No': 12,
+						},
+						answer: 10
+					},
+					11: {
+						question: 'You Do Not Qualify for ERC',
+						desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
+						answer: 11
+					},
+					12: {
+						question: 'Did You Receive PPP Money?',
+						choose: {
+							'Yes': 13,
+							'No': 14,
+						},
+						answer: 12
+					},
+					13: {
+						question: 'Enter info below to get your results',
+						answer: 13
+					},
+					14: {
+						question: 'Enter info below to get your results',
+						answer: 14
 					}
-				]
-      }
+				}
+			}
 		}
 	},
 	methods: {

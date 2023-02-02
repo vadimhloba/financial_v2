@@ -2,15 +2,18 @@
 
 	<div class="quiz">
 		<div class="quiz--inner">
+
 			<button class="quiz--back read-more">
 				<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
 				</svg>
 				<p class="medium">Back</p>
 			</button>
+
 			<div class="slider">
-				<div class="tab-move"></div>
+				<div class="tab-move" :style="`width: ${step * (100 / quiz.length)}%;`"></div>
 			</div>
+
 			<button @click="$store.commit('setQuiz', false)" class="quiz--close">
 				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="quiz--close">
 					<g clip-path="url(#clip0_31_2381)">
@@ -23,9 +26,10 @@
 					</defs>
 				</svg>
 			</button>
+
 			<div class="quiz--item">
-				<h2>{{ question }}</h2>
-				<p class="medium">{{ desription }}</p>
+				<h2 v-html="quiz[step].question"></h2>
+				<p v-html="quiz[step].desription" class="medium"></p>
 				<button class="link">
 					<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
@@ -33,10 +37,18 @@
 					<p>Back to the main page</p>
 				</button>
 				<div class="quiz--options">
-					<p class="medium">{{ post }}</p>
+					<p v-html="quiz[step].post" class="medium"></p>
 					<input type="number" min="2" step="1" max="1000000">
-					<button @click="checkAnswer({ choose })">{{ choose }}</button>
-					<form class="quiz--form">
+					<button
+						v-for="(item, index) in quiz[step].options"
+						@click="answer(item)"
+						:key="`button_${index}`">
+						{{ item }}
+					</button>
+					<form
+						v-if="step + 1 === quiz.length"
+						@submit.prevent="answer(quiz[step].answer)"
+						class="quiz--form">
 						<div class="field">
 							<input
 								type="text"
@@ -85,9 +97,10 @@
 							<input type="submit">
 						</div>
 					</form>
-					<p>{{ finishdesc }}</p>
+					<p v-html="quiz[step].finishdesc"></p>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
@@ -99,6 +112,7 @@ export default {
 	data() {
 		return {
 			valid: false,
+			step: 0,
 			form: {
         name: '',
         company: '',
@@ -135,14 +149,19 @@ export default {
       }
 		}
 	},
-	method: {
+	methods: {
+		answer(a){
+			this.quiz[this.step].answer = a
+			this.step = this.step + 1
+			localStorage.step = this.step
+			localStorage.quiz = JSON.stringify(this.quiz)
+		},
 		checkEmpty(e){
-		  if(e.target.value.length > 0){
-		    e.target.classList.add('not-empty')
-		  } else {
-		    e.target.classList.remove('not-empty')
-		  }
-
+			if(e.target.value.length > 0){
+				e.target.classList.add('not-empty')
+			} else {
+				e.target.classList.remove('not-empty')
+			}
 			if(this.form.name.length > 1 && this.form.company.length > 1 && this.form.phone.length > 8){
 				this.valid = true
 			} else {

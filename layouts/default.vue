@@ -2,9 +2,9 @@
   <main>
     <Header/>
     <Nuxt/>
+    <Footer/>
 		<Quiz v-if="quiz" />
 		<Thanks v-if="thanks" />
-    <Footer/>
   </main>
 </template>
 

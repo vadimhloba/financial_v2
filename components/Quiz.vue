@@ -2,12 +2,15 @@
 
 	<div class="quiz">
 		<div class="quiz--inner">
-			<button class="quiz--back">
+			<button class="quiz--back read-more">
 				<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
 				</svg>
 				<p class="medium">Back</p>
 			</button>
+			<div class="slider">
+				<div class="tab-move"></div>
+			</div>
 			<button @click="$store.commit('setQuiz', false)" class="quiz--close">
 				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="quiz--close">
 					<g clip-path="url(#clip0_31_2381)">
@@ -21,9 +24,68 @@
 				</svg>
 			</button>
 			<div class="quiz--item">
-				<h2></h2>
-				<p class="medium"></p>
+				<h2>{{ question }}</h2>
+				<p class="medium">{{ desription }}</p>
+				<button class="link">
+					<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
+					</svg>
+					<p>Back to the main page</p>
+				</button>
 				<div class="quiz--options">
+					<p class="medium">{{ post }}</p>
+					<input type="number" min="2" step="1" max="1000000">
+					<button @click="checkAnswer({ choose })">{{ choose }}</button>
+					<form class="quiz--form">
+						<div class="field">
+							<input
+								type="text"
+								id="name"
+								required>
+							<label
+							class="not-empty"
+							for="name">
+								Name
+							</label>
+						</div>
+						<div class="field">
+							<input
+								type="text"
+								id="company"
+								required>
+							<label
+							class="not-empty"
+							for="company">
+								Company name
+							</label>
+						</div>
+						<div class="field">
+							<input
+								type="text"
+								id="email"
+								required>
+							<label
+							class="not-empty"
+							for="email">
+								Email
+							</label>
+						</div>
+						<div class="field">
+							<input
+								type="text"
+								id="phone"
+								required>
+							<label
+							class="not-empty"
+							for="phone">
+								Phone
+							</label>
+						</div>
+						<div class="field">
+							<input type="submit">
+						</div>
+					</form>
+					<p>{{ finishdesc }}</p>
 				</div>
 			</div>
 		</div>
@@ -33,29 +95,84 @@
 
 <script scoped>
 export default {
-	name: 'Quiz'
+	name: 'Quiz',
+	data() {
+		return {
+			valid: false,
+			form: {
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+				quiz: [
+					{
+						question: 'I had W2 Employees in 2020 or 2021',
+						desription: 'Please Select One',
+						choose: ['Yes', 'No'],
+					},
+					{
+						question: 'You Do Not Qualify for ERC',
+						desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
+					},
+					{
+						question: 'How Many W2 EmployeesDo You Have?',
+						post: 'number of employees',
+						choose: 'Next',
+					},
+					{
+						question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
+						choose: ['Yes', 'No'],
+					},
+					{
+						question: 'Did You Receive PPP Money?',
+						choose: ['Yes', 'No'],
+					},
+					{
+						question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
+						choose: ['Yes', 'No'],
+					}
+				]
+      }
+		}
+	},
+	method: {
+		checkEmpty(e){
+		  if(e.target.value.length > 0){
+		    e.target.classList.add('not-empty')
+		  } else {
+		    e.target.classList.remove('not-empty')
+		  }
+
+			if(this.form.name.length > 1 && this.form.company.length > 1 && this.form.phone.length > 8){
+				this.valid = true
+			} else {
+				this.valid = false
+			}
+		}
+	}
 }
 </script>
 
 <style lang="scss" scoped>
 .quiz {
 	position: fixed;
-	z-index: 99;
+	z-index: 999;
 	background: rgba(14,14,17,.7);
 	top: 0; left: 0;
-	height: 100vh;
-	width: 100%;
-	overflow: hidden;
+	width: calc(100vw - 32px);
+	min-height: calc(100vh - 32px);
+	overflow-y: auto;
 	padding: 16px;
 	@media (min-width: 992px) {
 		padding: 50px;
+		width: calc(100vw - 100px);
+		min-height: calc(100vh - 200px);
 	}
 	&--inner {
 		background: var(--white);
 		border-radius: 12px;
-		min-height: calc(100vh - 100px);
+		min-height: calc(100vh - 200px);
 		max-width: 1340px;
-		width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
@@ -63,6 +180,23 @@ export default {
 		align-items: center;
 		position: relative;
 		padding: 85px 16px 32px;
+	}
+	&--back {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 24px;
+		left: 24px;
+		& svg {
+			margin-right: 4px;
+		}
+	}
+	&--close {
+		svg {
+			position: absolute;
+			top: 24px;
+			right: 24px;
+		}
 	}
 }
 </style>

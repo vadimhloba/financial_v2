@@ -66,6 +66,34 @@
 		cursor: default;
 	}
 }
+.lightgreen {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 140%;
+	width: 186px;
+	padding: 16px 0 13px;
+	border: none;
+	background: var(--whitish);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: .4s;
+	&:enabled {
+		border: 2px solid var(--lightgreen);
+		color: var(--lightgreen);
+	}
+	&:hover {
+		border: 2px solid var(--green);
+		color: var(--green);
+	}
+	&:active {
+		border: 4px solid var(--green);
+		color: var(--green);
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
 .green button {
 	background-color: var(--lightgreen);
 	color: var(--white);

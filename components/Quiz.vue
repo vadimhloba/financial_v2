@@ -10,7 +10,7 @@
 				<p class="medium">Back</p>
 			</button>
 
-			<div class="slider">
+			<div class="quiz--slider">
 				<div class="tab-move" :style="`width: ${step * (100 / quiz.length)}%;`"></div>
 			</div>
 
@@ -30,89 +30,92 @@
 			<Thanks v-if="quiz.length === step"/>
 
 			<div v-else class="quiz--item">
-				<h2 v-html="quiz[step].question"></h2>
-				<p v-html="quiz[step].desription" class="medium"></p>
 
-				<button class="link">
-					<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
-					</svg>
-					<p>Back to the main page</p>
-				</button>
-
-				<div class="quiz--options">
-
-					<div v-if="quiz[step].post">
-						<p v-for="item in quiz[step].post" class="medium">{{ item }}</p>
-						<input v-if="items == 2" type="number" min="2" step="1" max="1000000">
+				<form
+					v-if="step === 'form'"
+					@submit.prevent="answer(quiz[step].answer)"
+					class="quiz--form">
+					<h2>Enter info below to get your results</h2>
+					<div class="field">
+						<input
+							v-model="form.name"
+							type="text"
+							id="name"
+							required>
+						<label
+							class="not-empty"
+							for="name">
+							Name
+						</label>
 					</div>
+					<div class="field">
+						<input
+							v-model="form.company"
+							type="text"
+							id="company"
+							required>
+						<label
+							class="not-empty"
+							for="company">
+							Company name
+						</label>
+					</div>
+					<div class="field">
+						<input
+							v-model="form.email"
+							type="text"
+							id="email"
+							required>
+						<label
+							class="not-empty"
+							for="email">
+							Email
+						</label>
+					</div>
+					<div class="field">
+						<input
+							v-model="form.phone"
+							type="text"
+							id="phone"
+							required>
+						<label
+							class="not-empty"
+							for="phone">
+							Phone
+						</label>
+					</div>
+					<div class="field">
+						<input type="submit">
+					</div>
+				</form>
 
-					<button
-						v-for="(item, index) in quiz[step].options"
-						@click="answer(item)"
-						:key="`button_${index}`">
-						{{ item }}
+				<div v-else-if="step === 'not'">
+					<h2>You Do Not Qualify for ERC</h2>
+					<p class="medium">Unfortunately, based on your answers it appears we can not help you at this time</p>
+					<button class="link">
+						<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
+						</svg>
+						<p>Back to the main page</p>
 					</button>
-
-					<form
-						v-if="step + 1 === quiz.length"
-						@submit.prevent="answer(quiz[step].answer)"
-						class="quiz--form">
-						<div class="field">
-							<input
-								v-model="quiz[step].answer"
-								type="text"
-								id="name"
-								required>
-							<label
-								class="not-empty"
-								for="name">
-								Name
-							</label>
-						</div>
-						<div class="field">
-							<input
-								v-model="quiz[step].answer"
-								type="text"
-								id="company"
-								required>
-							<label
-								class="not-empty"
-								for="company">
-								Company name
-							</label>
-						</div>
-						<div class="field">
-							<input
-								v-model="quiz[step].answer"
-								type="text"
-								id="email"
-								required>
-							<label
-								class="not-empty"
-								for="email">
-								Email
-							</label>
-						</div>
-						<div class="field">
-							<input
-								v-model="quiz[step].answer"
-								type="text"
-								id="phone"
-								required>
-							<label
-								class="not-empty"
-								for="phone">
-								Phone
-							</label>
-						</div>
-						<div class="field">
-							<input type="submit">
-						</div>
-					</form>
-
-					<p v-html="quiz[step].finishdesc"></p>
 				</div>
+
+				<div class="default-q" v-else>
+					<h2 v-html="quiz[step].question"></h2>
+					<p v-html="quiz[step].desription" class="medium"></p>
+					<input v-if="quiz[step].options === 'Next'" type="number" min="2" step="1" max="1000000">
+					<p v-html="quiz[step].finishdesc"></p>
+					<div class="user-choose">
+						<button
+							v-for="(item, index) in quiz[step].options"
+							@click="answer(item)"
+							:key="`button_${index}`"
+							class="lightgreen">
+							{{ item }}
+						</button>
+					</div>
+				</div>
+
 			</div>
 
 		</div>
@@ -139,91 +142,52 @@ export default {
 					desription: 'Please Select One',
 					options: ['Yes', 'No'],
 					next: {
-						'Yes': 3,
+						'Yes': 2,
 						'No': 'not',
 					},
 					answer: null
 				},
 				2: {
-					question: 'You Do Not Qualify for ERC',
-					desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
-					answer: 'not'
-				},
-				3: {
 					question: 'How Many W2 EmployeesDo You Have?',
 					post: 'number of employees',
-					options: 'Next',
-					answer: 3
+					options: ['Next'],
+					answer: 2
 				},
-				4: {
+				3: {
 					question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
 					options: ['Yes', 'No'],
 					next: {
-						'Yes': 6,
+						'Yes': 4,
 						'No': 5,
 					},
-					answer: 3
+					answer: null
 				},
-				5: {
+				4: {
 					question: 'Did You Receive PPP Money?',
 					options: ['Yes', 'No'],
 					next: {
-						'Yes': 8,
-						'No': 7,
+						'Yes': 'form',
+						'No': 'form',
 					},
-					answer: 5
+					answer: null
 				},
-				6: {
+				5: {
 					question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
 					options: ['Yes', 'No'],
 					next: {
-						'Yes': 10,
-						'No': 9,
+						'Yes': 6,
+						'No': 'form',
 					},
-					answer: 6
+					answer: null
 				},
-				7: {
-					question: 'Enter info below to get your results',
-					answer: 7
-				},
-				8: {
-					question: 'Enter info below to get your results',
-					answer: 8
-				},
-				9: {
-					question: 'Enter info below to get your results',
-					answer: 9
-				},
-				10: {
+				6: {
 					question: 'Are you the owner or decision maker for this business?',
 					options: ['Yes', 'No'],
 					next: {
-						'Yes': 11,
-						'No': 12,
+						'Yes': 4,
+						'No': 'not',
 					},
-					answer: 10
-				},
-				11: {
-					question: 'You Do Not Qualify for ERC',
-					desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
-					answer: 11
-				},
-				12: {
-					question: 'Did You Receive PPP Money?',
-					options: ['Yes', 'No'],
-					next: {
-						'Yes': 13,
-						'No': 14,
-					},
-					answer: 12
-				},
-				13: {
-					question: 'Enter info below to get your results',
-					answer: 13
-				},
-				14: {
-					question: 'Enter info below to get your results',
-					answer: 14
+					answer: null
 				}
 			}
 		}
@@ -267,7 +231,7 @@ export default {
 		min-height: calc(100vh - 200px);
 	}
 	&--inner {
-		background: var(--white);
+		background: var(--whitish);
 		border-radius: 12px;
 		min-height: calc(100vh - 200px);
 		max-width: 1340px;
@@ -283,7 +247,7 @@ export default {
 		position: absolute;
 		display: flex;
 		align-items: center;
-		top: 24px;
+		top: 34px;
 		left: 24px;
 		& svg {
 			margin-right: 4px;
@@ -294,6 +258,43 @@ export default {
 			position: absolute;
 			top: 24px;
 			right: 24px;
+		}
+	}
+	&--slider {
+		position: absolute;
+		top: 40px;
+		left: 27%;
+		transform: translateY(-27%);
+		border-radius: 20px;
+		background: var(--grayish);
+		max-width: 638px;
+		width: 100%;
+		height: 5px;
+		overflow: hidden;
+		.tab-move {
+			position: absolute;
+			background: var(--lightgreen);
+			height: 5px;
+			transition: width .3s ease;
+		}
+	}
+	&--item {
+		.default-q {
+			text-align: center;
+			h2 {
+				max-width: 638px;
+			}
+			p {
+				margin-top: 16px;
+			}
+			.user-choose {
+				display: flex;
+				margin-top: 40px;
+				justify-content: center;
+				button:first-child {
+					margin-right: 32px;
+				}
+			}
 		}
 	}
 }

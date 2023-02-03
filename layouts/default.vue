@@ -3,8 +3,8 @@
     <Header/>
     <Nuxt/>
     <Footer/>
-		<Quiz v-if="quiz" />
-		<Thanks v-if="thanks" />
+		<Quiz v-if="quiz"/>
+		<Thanks v-if="thanks"/>
   </main>
 </template>
 

@@ -42,12 +42,13 @@
 
 				<div class="quiz--options">
 
-					<p v-html="quiz[step].post" class="medium"></p>
-
-					<input v-if="items = 2" type="number" min="2" step="1" max="1000000">
+					<div v-if="quiz[step].post">
+						<p v-for="item in quiz[step].post" class="medium">{{ item }}</p>
+						<input v-if="items == 2" type="number" min="2" step="1" max="1000000">
+					</div>
 
 					<button
-						v-for="(item, index) in quiz[step].choose"
+						v-for="(item, index) in quiz[step].options"
 						@click="answer(item)"
 						:key="`button_${index}`">
 						{{ item }}
@@ -64,8 +65,8 @@
 								id="name"
 								required>
 							<label
-							class="not-empty"
-							for="name">
+								class="not-empty"
+								for="name">
 								Name
 							</label>
 						</div>
@@ -76,8 +77,8 @@
 								id="company"
 								required>
 							<label
-							class="not-empty"
-							for="company">
+								class="not-empty"
+								for="company">
 								Company name
 							</label>
 						</div>
@@ -88,8 +89,8 @@
 								id="email"
 								required>
 							<label
-							class="not-empty"
-							for="email">
+								class="not-empty"
+								for="email">
 								Email
 							</label>
 						</div>
@@ -100,8 +101,8 @@
 								id="phone"
 								required>
 							<label
-							class="not-empty"
-							for="phone">
+								class="not-empty"
+								for="phone">
 								Phone
 							</label>
 						</div>
@@ -137,7 +138,8 @@ export default {
 					1: {
 						question: 'I had W2 Employees in 2020 or 2021',
 						desription: 'Please Select One',
-						choose: {
+						options: ['Yes', 'No'],
+						next: {
 							'Yes': 3,
 							'No': 'not',
 						},
@@ -151,12 +153,13 @@ export default {
 					3: {
 						question: 'How Many W2 EmployeesDo You Have?',
 						post: 'number of employees',
-						choose: 'Next',
+						options: 'Next',
 						answer: 3
 					},
 					4: {
 						question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
-						choose: {
+						options: ['Yes', 'No'],
+						next: {
 							'Yes': 6,
 							'No': 5,
 						},
@@ -164,7 +167,8 @@ export default {
 					},
 					5: {
 						question: 'Did You Receive PPP Money?',
-						choose: {
+						options: ['Yes', 'No'],
+						next: {
 							'Yes': 8,
 							'No': 7,
 						},
@@ -172,7 +176,8 @@ export default {
 					},
 					6: {
 						question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
-						choose: {
+						options: ['Yes', 'No'],
+						next: {
 							'Yes': 10,
 							'No': 9,
 						},
@@ -192,7 +197,8 @@ export default {
 					},
 					10: {
 						question: 'Are you the owner or decision maker for this business?',
-						choose: {
+						options: ['Yes', 'No'],
+						next: {
 							'Yes': 11,
 							'No': 12,
 						},
@@ -205,7 +211,8 @@ export default {
 					},
 					12: {
 						question: 'Did You Receive PPP Money?',
-						choose: {
+						options: ['Yes', 'No'],
+						next: {
 							'Yes': 13,
 							'No': 14,
 						},

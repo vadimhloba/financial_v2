@@ -126,7 +126,7 @@ export default {
 	data() {
 		return {
 			valid: false,
-			step: 0,
+			step: 1,
 			form: {
         name: '',
         company: '',
@@ -134,98 +134,96 @@ export default {
         phone: '',
 			},
 			quiz: {
-				items: {
-					1: {
-						question: 'I had W2 Employees in 2020 or 2021',
-						desription: 'Please Select One',
-						options: ['Yes', 'No'],
-						next: {
-							'Yes': 3,
-							'No': 'not',
-						},
-						answer: null
+				1: {
+					question: 'I had W2 Employees in 2020 or 2021',
+					desription: 'Please Select One',
+					options: ['Yes', 'No'],
+					next: {
+						'Yes': 3,
+						'No': 'not',
 					},
-					2: {
-						question: 'You Do Not Qualify for ERC',
-						desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
-						answer: 'not'
+					answer: null
+				},
+				2: {
+					question: 'You Do Not Qualify for ERC',
+					desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
+					answer: 'not'
+				},
+				3: {
+					question: 'How Many W2 EmployeesDo You Have?',
+					post: 'number of employees',
+					options: 'Next',
+					answer: 3
+				},
+				4: {
+					question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
+					options: ['Yes', 'No'],
+					next: {
+						'Yes': 6,
+						'No': 5,
 					},
-					3: {
-						question: 'How Many W2 EmployeesDo You Have?',
-						post: 'number of employees',
-						options: 'Next',
-						answer: 3
+					answer: 3
+				},
+				5: {
+					question: 'Did You Receive PPP Money?',
+					options: ['Yes', 'No'],
+					next: {
+						'Yes': 8,
+						'No': 7,
 					},
-					4: {
-						question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
-						options: ['Yes', 'No'],
-						next: {
-							'Yes': 6,
-							'No': 5,
-						},
-						answer: 3
+					answer: 5
+				},
+				6: {
+					question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
+					options: ['Yes', 'No'],
+					next: {
+						'Yes': 10,
+						'No': 9,
 					},
-					5: {
-						question: 'Did You Receive PPP Money?',
-						options: ['Yes', 'No'],
-						next: {
-							'Yes': 8,
-							'No': 7,
-						},
-						answer: 5
+					answer: 6
+				},
+				7: {
+					question: 'Enter info below to get your results',
+					answer: 7
+				},
+				8: {
+					question: 'Enter info below to get your results',
+					answer: 8
+				},
+				9: {
+					question: 'Enter info below to get your results',
+					answer: 9
+				},
+				10: {
+					question: 'Are you the owner or decision maker for this business?',
+					options: ['Yes', 'No'],
+					next: {
+						'Yes': 11,
+						'No': 12,
 					},
-					6: {
-						question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
-						options: ['Yes', 'No'],
-						next: {
-							'Yes': 10,
-							'No': 9,
-						},
-						answer: 6
+					answer: 10
+				},
+				11: {
+					question: 'You Do Not Qualify for ERC',
+					desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
+					answer: 11
+				},
+				12: {
+					question: 'Did You Receive PPP Money?',
+					options: ['Yes', 'No'],
+					next: {
+						'Yes': 13,
+						'No': 14,
 					},
-					7: {
-						question: 'Enter info below to get your results',
-						answer: 7
-					},
-					8: {
-						question: 'Enter info below to get your results',
-						answer: 8
-					},
-					9: {
-						question: 'Enter info below to get your results',
-						answer: 9
-					},
-					10: {
-						question: 'Are you the owner or decision maker for this business?',
-						options: ['Yes', 'No'],
-						next: {
-							'Yes': 11,
-							'No': 12,
-						},
-						answer: 10
-					},
-					11: {
-						question: 'You Do Not Qualify for ERC',
-						desription: 'Unfortunately, based on your answers it appears we can not help you at this time',
-						answer: 11
-					},
-					12: {
-						question: 'Did You Receive PPP Money?',
-						options: ['Yes', 'No'],
-						next: {
-							'Yes': 13,
-							'No': 14,
-						},
-						answer: 12
-					},
-					13: {
-						question: 'Enter info below to get your results',
-						answer: 13
-					},
-					14: {
-						question: 'Enter info below to get your results',
-						answer: 14
-					}
+					answer: 12
+				},
+				13: {
+					question: 'Enter info below to get your results',
+					answer: 13
+				},
+				14: {
+					question: 'Enter info below to get your results',
+					answer: 14
 				}
 			}
 		}

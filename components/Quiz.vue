@@ -3,11 +3,13 @@
 	<div class="quiz">
 		<div class="quiz--inner">
 
-			<button class="quiz--back read-more">
+			{{stepPrev}} - {{step}}
+
+			<button class="quiz--back read-more" v-if="step !== 1" @click.prevent="stepBack">
 				<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
 				</svg>
-				<p class="medium">Back</p>
+				<span class="medium">Back</span>
 			</button>
 
 			<div class="quiz--slider">
@@ -33,7 +35,7 @@
 
 				<form
 					v-if="step === 'form'"
-					@submit.prevent="answer(quiz[step].answer)"
+					@submit.prevent="submitFrom"
 					class="quiz--form">
 					<h2>Enter info below to get your results</h2>
 					<div class="field">
@@ -92,27 +94,32 @@
 				<div v-else-if="step === 'not'">
 					<h2>You Do Not Qualify for ERC</h2>
 					<p class="medium">Unfortunately, based on your answers it appears we can not help you at this time</p>
-					<button class="link">
+					<button class="link" @click.prevent="step = 1">
 						<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
 						</svg>
-						<p>Back to the main page</p>
+						<span>Back to the main page</span>
 					</button>
 				</div>
 
 				<div class="default-q" v-else>
 					<h2 v-html="quiz[step].question"></h2>
 					<p v-html="quiz[step].desription" class="medium"></p>
-					<input v-if="quiz[step].options === 'Next'" type="number" min="2" step="1" max="1000000">
 					<p v-html="quiz[step].finishdesc"></p>
 					<div class="user-choose">
-						<button
-							v-for="(item, index) in quiz[step].options"
-							@click="answer(item)"
-							:key="`button_${index}`"
-							class="lightgreen">
-							{{ item }}
-						</button>
+						<div v-if="quiz[step].options === 'number'">
+							<input v-model="quiz[step].answer" type="number" min="2" step="1" max="100">
+							<button @click="answer(quiz[step])" class="lightgreen">Next</button>
+						</div>
+						<div v-else>
+							<button
+								v-for="(item, index) in Object.keys(quiz[step].options)"
+								@click="answer(item)"
+								:key="`button_${index}`"
+								class="lightgreen">
+								{{ item }}
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -130,6 +137,7 @@ export default {
 		return {
 			valid: false,
 			step: 1,
+			stepPrev: [],
 			form: {
         name: '',
         company: '',
@@ -140,8 +148,7 @@ export default {
 				1: {
 					question: 'I had W2 Employees in 2020 or 2021',
 					desription: 'Please Select One',
-					options: ['Yes', 'No'],
-					next: {
+					options: {
 						'Yes': 2,
 						'No': 'not',
 					},
@@ -150,22 +157,20 @@ export default {
 				2: {
 					question: 'How Many W2 EmployeesDo You Have?',
 					post: 'number of employees',
-					options: ['Next'],
+					options: 'number',
 					answer: 2
 				},
 				3: {
 					question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
-					options: ['Yes', 'No'],
-					next: {
-						'Yes': 4,
-						'No': 5,
+					options: {
+						'Yes': 5,
+						'No': 4,
 					},
 					answer: null
 				},
 				4: {
 					question: 'Did You Receive PPP Money?',
-					options: ['Yes', 'No'],
-					next: {
+					options: {
 						'Yes': 'form',
 						'No': 'form',
 					},
@@ -173,8 +178,7 @@ export default {
 				},
 				5: {
 					question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
-					options: ['Yes', 'No'],
-					next: {
+					options: {
 						'Yes': 6,
 						'No': 'form',
 					},
@@ -182,8 +186,7 @@ export default {
 				},
 				6: {
 					question: 'Are you the owner or decision maker for this business?',
-					options: ['Yes', 'No'],
-					next: {
+					options: {
 						'Yes': 4,
 						'No': 'not',
 					},
@@ -195,9 +198,10 @@ export default {
 	methods: {
 		answer(a){
 			this.quiz[this.step].answer = a
-			this.step = this.step + 1
-			localStorage.step = this.step
-			localStorage.quiz = JSON.stringify(this.quiz)
+			this.stepPrev.push(this.step)
+			this.step = this.step === 2 ? 3 : this.quiz[this.step].options[a]
+			// localStorage.step = this.step
+			// localStorage.quiz = JSON.stringify(this.quiz)
 		},
 		checkEmpty(e){
 			if(e.target.value.length > 0){
@@ -210,6 +214,18 @@ export default {
 			} else {
 				this.valid = false
 			}
+		},
+		submitFrom(e){
+			e.preventDefault()
+			const formData = this.form
+			formData.quiz = this.quiz
+			console.dir(formData)
+			this.$store.commit('setQuiz', false)
+			this.$store.commit('setThanks', true)
+		},
+		stepBack(){
+			this.step = this.stepPrev[this.stepPrev.length - 1]
+			this.stepPrev.pop()
 		}
 	}
 }

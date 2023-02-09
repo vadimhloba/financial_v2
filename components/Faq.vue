@@ -51,8 +51,7 @@
 						v-if="showDiv1"
 						class="tab-appear qual">
 						<div
-							@click="toggleDiv(1)"
-							:class="{'active': isActive(1)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Can I qualify if I'm a 1099 contractor?</h3>
 							<div>
@@ -62,8 +61,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(2)"
-							:class="{'active': isActive(2)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Can I qualify if I don't have any W2 employees?</h3>
 							<div>
@@ -73,8 +71,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(3)"
-							:class="{'active': isActive(3)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Can I qualify for ERC when I got a PPP loan?</h3>
 							<div>
@@ -84,8 +81,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(4)"
-							:class="{'active': isActive(4)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">What if my revenue went up in 2020 or 2021? Can I still qualify?</h3>
 							<div>
@@ -232,6 +228,9 @@ export default {
 		}
 	},
 	methods: {
+		clickEl(e){
+			e.target.classList.toggle('active')
+		},
 		toggleDiv(id) {
       if (this.activeDiv === id) {
         this.activeDiv = null
@@ -242,6 +241,11 @@ export default {
     isActive(id) {
       return this.activeDiv === id
     }
+	},
+	mounted(){
+		for (let i = 0; i < 10; i++) {
+			console.dir(i)
+		}
 	}
 }
 </script>
@@ -329,6 +333,9 @@ export default {
 					}
 					p {
 						margin-top: 8px;
+					}
+					*{
+						pointer-events: none;
 					}
 				}
 			}

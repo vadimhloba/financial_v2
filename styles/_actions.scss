@@ -219,7 +219,7 @@
 		transition: .2s;
 	}
 	&:enabled {
-		p {
+		p, span {
 			color: var(--lightgreen);
 		}
 		svg path {
@@ -227,7 +227,7 @@
 		}
 	}
 	&:hover {
-		p {
+		p, span {
 			color: var(--green);
 		}
 		svg {

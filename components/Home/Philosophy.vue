@@ -38,6 +38,7 @@
 					</g>
 					<rect
 						class="animate__animated"
+						data-parent="2"
 						data-anim="heightOut"
             data-duration="400"
 						style="opacity: 1;"
@@ -47,6 +48,7 @@
 					</rect>
 					<rect
 						class="animate__animated"
+						data-parent="2"
 						data-anim="heightOut"
             data-delay="390"
             data-duration="300"
@@ -59,6 +61,7 @@
 					</rect>
 					<rect
 						class="animate__animated"
+						data-parent="2"
 						data-anim="heightOut"
             data-delay="680"
             data-duration="300"

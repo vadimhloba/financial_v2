@@ -3,8 +3,6 @@
 	<div class="quiz">
 		<div class="quiz--inner">
 
-			{{stepPrev}} - {{step}}
-
 			<button class="quiz--back read-more" v-if="step !== 1" @click.prevent="stepBack">
 				<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
@@ -12,8 +10,8 @@
 				<span class="medium">Back</span>
 			</button>
 
-			<div class="quiz--slider">
-				<div class="tab-move" :style="`width: ${step * (100 / quiz.length)}%;`"></div>
+			<div v-if="quiz.step = 1" class="quiz--slider">
+				<div class="tab-move" :style="`width: ${counterLoad}%;`"></div>
 			</div>
 
 			<button @click="$store.commit('setQuiz', false)" class="quiz--close">
@@ -29,13 +27,11 @@
 				</svg>
 			</button>
 
-			<Thanks v-if="quiz.length === step"/>
-
-			<div v-else class="quiz--item">
+			<div v-if="quiz.step = 1" class="quiz--item">
 
 				<form
 					v-if="step === 'form'"
-					@submit.prevent="submitFrom"
+					@submit.prevent="submitForm"
 					class="quiz--form">
 					<h2>Enter info below to get your results</h2>
 					<div class="field">
@@ -87,18 +83,21 @@
 						</label>
 					</div>
 					<div class="field">
-						<input type="submit">
+						<input class="green-contact" type="submit" value="Submit">
+					</div>
+					<div class="field">
+						<p class="small">By clicking “Submit,” I am providing my prior express written consent to be contacted at the above telephone number with offers and marketing communications from Financial Match [if applicable, “and affiliated tax professionals”] via automated telephone dialing and texting systems and artificial or pre-recorded voice (including SMS and MMS) and/or email, even if the telephone number above is on a corporate, state or national Do Not Call list. Consent is not required as a condition to purchase any goods or services.</p>
 					</div>
 				</form>
 
-				<div v-else-if="step === 'not'">
+				<div class="quiz--not" v-else-if="step === 'not'">
 					<h2>You Do Not Qualify for ERC</h2>
 					<p class="medium">Unfortunately, based on your answers it appears we can not help you at this time</p>
-					<button class="link" @click.prevent="step = 1">
+					<button class="read-more" @click.prevent="$store.commit('setQuiz', false)">
 						<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.65686 11.6567L1.41422 7.4141L6.19888e-06 5.99988L1.41422 4.58567L5.65686 0.34303L7.07107 1.75724L3.67696 5.15136L9.8995 4.58567L9.8995 7.4141L3.67696 6.84841L7.07107 10.2425L5.65686 11.6567Z" fill="#41A280"/>
 						</svg>
-						<span>Back to the main page</span>
+						<span class="medium">Back to the main page</span>
 					</button>
 				</div>
 
@@ -107,9 +106,10 @@
 					<p v-html="quiz[step].desription" class="medium"></p>
 					<p v-html="quiz[step].finishdesc"></p>
 					<div class="user-choose">
-						<div v-if="quiz[step].options === 'number'">
-							<input v-model="quiz[step].answer" type="number" min="2" step="1" max="100">
-							<button @click="answer(quiz[step])" class="lightgreen">Next</button>
+						<div class="choose-number" v-if="quiz[step].options === 'number'">
+							<input v-model="quiz[step].answer" id="number" type="number" min="2" step="1" max="100">
+							<label class="not-empty" for="number">number of employees</label>
+							<button @click="answer(quiz[step])" class="green-contact">Next</button>
 						</div>
 						<div v-else>
 							<button
@@ -136,6 +136,7 @@ export default {
 	data() {
 		return {
 			valid: false,
+			thanks: false,
 			step: 1,
 			stepPrev: [],
 			form: {
@@ -163,20 +164,12 @@ export default {
 				3: {
 					question: 'Did You Experience a Supply Chain Disruptionin 2020 or 2021?',
 					options: {
-						'Yes': 5,
-						'No': 4,
+						'Yes': 4,
+						'No': 6,
 					},
 					answer: null
 				},
 				4: {
-					question: 'Did You Receive PPP Money?',
-					options: {
-						'Yes': 'form',
-						'No': 'form',
-					},
-					answer: null
-				},
-				5: {
 					question: 'Did You Have a Decrease in Revenue in 2020 or 2021 compared to 2019?',
 					options: {
 						'Yes': 6,
@@ -184,24 +177,41 @@ export default {
 					},
 					answer: null
 				},
-				6: {
+				5: {
 					question: 'Are you the owner or decision maker for this business?',
 					options: {
-						'Yes': 4,
+						'Yes': 6,
 						'No': 'not',
+					},
+					answer: null
+				},
+				6: {
+					question: 'Did You Receive PPP Money?',
+					options: {
+						'Yes': 'form',
+						'No': 'form',
 					},
 					answer: null
 				}
 			}
 		}
 	},
+	computed: {
+    counterLoad() {
+			if(this.step === 'not'){
+				return this.counterLoad = 0
+			} else if(this.step === 'form') {
+				return this.counterLoad = 100
+			} else {
+				return (this.step / Object.keys(this.quiz).length) * 100;
+			}
+    },
+  },
 	methods: {
 		answer(a){
 			this.quiz[this.step].answer = a
 			this.stepPrev.push(this.step)
 			this.step = this.step === 2 ? 3 : this.quiz[this.step].options[a]
-			// localStorage.step = this.step
-			// localStorage.quiz = JSON.stringify(this.quiz)
 		},
 		checkEmpty(e){
 			if(e.target.value.length > 0){
@@ -215,11 +225,10 @@ export default {
 				this.valid = false
 			}
 		},
-		submitFrom(e){
+		submitForm(e){
 			e.preventDefault()
 			const formData = this.form
 			formData.quiz = this.quiz
-			console.dir(formData)
 			this.$store.commit('setQuiz', false)
 			this.$store.commit('setThanks', true)
 		},
@@ -291,6 +300,7 @@ export default {
 			position: absolute;
 			background: var(--lightgreen);
 			height: 5px;
+			max-width: 100%;
 			transition: width .3s ease;
 		}
 	}
@@ -310,6 +320,96 @@ export default {
 				button:first-child {
 					margin-right: 32px;
 				}
+				.choose-number {
+					display: flex;
+					flex-direction: column;
+					max-width: 332px;
+					width: 100%;
+					input {
+						position: relative;
+						margin-bottom: 22px;
+						background: none;
+						border: 0;
+						padding-top: 4px;
+						padding-bottom: 4px;
+						font-weight: 600;
+						font-size: 20px;
+						line-height: 140%;
+						border-bottom: 1px solid var(--gray);
+						outline: none;
+					}
+					label {
+						position: absolute;
+						transform: translateY(-16px);
+						pointer-events: none;
+					}
+					button {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	&--form {
+		h2 {
+			margin-bottom: 40px;
+		}
+		.field {
+			display: flex;
+			max-width: 332px;
+			width: 100%;
+			margin: 0 auto;
+			input[type=text] {
+				position: relative;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 140%;
+				width: 100%;
+				background: none;
+				border: 0;
+				border-bottom: 1px solid var(--gray);
+				padding-bottom: 4px;
+				margin-bottom: 62px;
+				outline: none;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			input:focus + label, input:valid + label {
+  			color: var(--gray);
+  			transform: translateY(-16px);
+				line-height: 120%;
+				font-size: 14px;
+			}
+			input[type=submit] {
+				margin: 0 auto;
+				width: 100%;
+			}
+			label {
+				position: absolute;
+				transform: translateY(10px);
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 140%;
+				transition: .2s ease;
+				pointer-events: none;
+			}
+			p {
+				margin-top: 48px;
+			}
+		}
+	}
+	&--not {
+		h2 {
+			max-width: 410px;
+			margin: 0 auto;
+			margin-bottom: 16px;
+		}
+		button {
+			margin: 0 auto;
+			margin-top: 40px;
+			svg {
+				margin-right: 4px; 
 			}
 		}
 	}

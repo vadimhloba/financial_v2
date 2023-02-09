@@ -8,6 +8,7 @@
 					<path d="M0 337V10C0 4.47715 4.47715 0 10 0H1033.5L1203.33 253.028L1297.11 201.133V46.6036H1366C1371.52 46.6036 1376 51.0807 1376 56.6036V145.688C1376 152.963 1372.05 159.665 1365.68 163.187L1297.11 201.133V298.703C1297.11 304.226 1292.63 308.703 1287.11 308.703H1246.03C1242.69 308.703 1239.58 307.043 1237.72 304.276L1203.33 253.028L1038.02 344.5C1035.05 346.14 1031.72 347 1028.34 347H10C4.47715 347 0 342.523 0 337Z" fill="#1D3C86"/>
 					<rect
 						class="animate__animated"
+						data-parent="2"
 						data-anim="heightOut"
             data-duration="400"
 						style="opacity: 1;"
@@ -17,6 +18,7 @@
 					</rect>
 					<rect
 						class="animate__animated"
+						data-parent="2"
 						data-anim="heightOut"
             data-delay="390"
             data-duration="300"
@@ -29,6 +31,7 @@
 					</rect>
 					<rect
 						class="animate__animated"
+						data-parent="2"
 						data-anim="heightOut"
             data-delay="680"
             data-duration="300"
@@ -62,10 +65,10 @@
 					<div class="wrap">
 						<div class="text-group">
 							<p class="medium">Numbers of Employees:</p>
-							<p>20</p>
+							<p>{{ counter }}</p>
 						</div>
-						<input type="range">
-						<h1 class="title"><span class="regular">$</span>312,000</h1>
+						<input v-model="counter" type="range" min="1" max="100">
+						<h1 class="title"><span class="regular">$</span>{{ (31200 * counter).toLocaleString("en-US") }}</h1>
 					</div>
 				</div>
 			</div>
@@ -82,6 +85,11 @@
 <script scoped>
 export default {
 	name: 'ErcPayout',
+	data() {
+		return {
+			counter: 0,
+		}
+	}
 }
 </script>
 

@@ -9,6 +9,7 @@
 					<rect
 						class="animate__animated"
 						data-anim="heightOut"
+						data-parent="2"
             data-duration="400"
 						style="opacity: 1;"
 						width="1203.33"
@@ -18,6 +19,7 @@
 					<rect
 						class="animate__animated"
 						data-anim="heightOut"
+						data-parent="2"
             data-delay="390"
             data-duration="300"
 						style="opacity: 1;"
@@ -30,6 +32,7 @@
 					<rect
 						class="animate__animated"
 						data-anim="heightOut"
+						data-parent="2"
             data-delay="680"
             data-duration="300"
 						style="opacity: 1;"
@@ -62,10 +65,10 @@
 					<div class="wrap">
 						<div class="text-group">
 							<p class="medium">Numbers of Employees:</p>
-							<p>20</p>
+							<p>{{ counter }}</p>
 						</div>
-						<input type="range">
-						<h1 class="title"><span class="regular">$</span>312,000</h1>
+						<input v-model="counter" type="range" min="1" max="100">
+						<h1 class="title"><span class="regular">$</span>{{ (31200 * counter).toLocaleString("en-US") }}</h1>
 					</div>
 				</div>
 			</div>
@@ -81,7 +84,12 @@
 
 <script scoped>
 export default {
-    name: "HomePayout",
+  name: "HomePayout",
+	data() {
+		return {
+			counter: 0,
+		}
+	}
 }
 </script>
 

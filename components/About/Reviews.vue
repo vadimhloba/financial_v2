@@ -23,7 +23,7 @@
 								class="box animate__animated"
 								data-anim="fadeInRight"
 								data-delay="100"
-								data-parent="4">
+								data-parent="3">
 								<h3>Selena Giri</h3>
 								<p class="medium">CEO Chess.com</p>
 							</div>
@@ -31,7 +31,7 @@
 								class="box animate__animated"
 								data-anim="fadeInRight"
 								data-delay="100"
-								data-parent="4">
+								data-parent="3">
 								<h1><span class="regular">$</span>200,500</h1>
 								<p class="medium">received to our clients</p>
 							</div>
@@ -39,7 +39,7 @@
 								class="box animate__animated"
 								data-anim="fadeInRight"
 								data-delay="100"
-								data-parent="4">
+								data-parent="3">
 								<div>
 									<h1>4</h1>
 									<h2 class="regular">months</h2>

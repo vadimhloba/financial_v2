@@ -94,8 +94,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(5)"
-							:class="{'active': isActive(5)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">How long is the ERC program open for?</h3>
 							<div>
@@ -105,8 +104,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(6)"
-							:class="{'active': isActive(6)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">What if I have bad credit? Is there a credit check involved?</h3>
 							<div>
@@ -116,8 +114,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(7)"
-							:class="{'active': isActive(7)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Can I qualify for ERC if my business is now closed</h3>
 							<div>
@@ -131,8 +128,7 @@
 						v-if="showDiv2"
 						class="tab-appear">
 						<div
-							@click="toggleDiv(8)"
-							:class="{'active': isActive(8)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">What documents do I need to send you?</h3>
 							<div>
@@ -147,8 +143,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(9)"
-							:class="{'active': isActive(9)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Do I need to repay the tax credit?</h3>
 							<div>
@@ -158,8 +153,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(10)"
-							:class="{'active': isActive(10)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">How long will it take to get my credit?</h3>
 							<div>
@@ -169,8 +163,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(11)"
-							:class="{'active': isActive(11)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">When will the ERC funds run out?</h3>
 							<div>
@@ -180,8 +173,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(12)"
-							:class="{'active': isActive(12)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">What if I owe back taxes on my account with the IRS?</h3>
 							<div>
@@ -191,8 +183,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(13)"
-							:class="{'active': isActive(13)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Is the ERC credit taxable?</h3>
 							<div>
@@ -202,8 +193,7 @@
 							</div>
 						</div>
 						<div
-							@click="toggleDiv(14)"
-							:class="{'active': isActive(14)}"
+							@click="clickEl"
 							class="post">
 							<h3 class="btn-tab">Will I get in trouble with the IRS for filing?</h3>
 							<div>
@@ -227,27 +217,11 @@ export default {
 		return {
 			showDiv1: true,
 			showDiv2: false,
-			activeDiv: null
 		}
 	},
 	methods: {
 		clickEl(e){
 			e.target.classList.toggle('active')
-		},
-		toggleDiv(id) {
-      if (this.activeDiv === id) {
-        this.activeDiv = null
-      } else {
-        this.activeDiv = id
-      }
-    },
-    isActive(id) {
-      return this.activeDiv === id
-    }
-	},
-	mounted(){
-		for (let i = 0; i < 10; i++) {
-			console.dir(i)
 		}
 	}
 }

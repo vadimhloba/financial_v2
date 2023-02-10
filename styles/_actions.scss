@@ -219,7 +219,7 @@
 		transition: .2s;
 	}
 	&:enabled {
-		p, span {
+		p, span, a {
 			color: var(--lightgreen);
 		}
 		svg path {
@@ -227,7 +227,7 @@
 		}
 	}
 	&:hover {
-		p, span {
+		p, span, a {
 			color: var(--green);
 		}
 		svg {
@@ -247,7 +247,7 @@
 		}
 	}
 	&:active {
-		p {
+		p, span, a {
 			color: var(--lightgreen);
 		}
 		svg {
@@ -273,7 +273,7 @@
 		transition: .2s;
 	}
 	&:enabled {
-		p {
+		p, span {
 			color: var(--red);
 		}
 		svg path {
@@ -281,7 +281,7 @@
 		}
 	}
 	&:hover {
-		p {
+		p, span {
 			color: var(--darkred);
 		}
 		svg {
@@ -301,7 +301,7 @@
 		}
 	}
 	&:active {
-		p {
+		p, span {
 			color: var(--red);
 		}
 		svg {

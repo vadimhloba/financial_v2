@@ -11,57 +11,57 @@
 					<a>Manager</a>
 					<a>Designer</a>
 				</div>
-				<button class="read-more">
-					<p class="medium">View more</p>
+				<button class="read-more" @click="nextSlide = !nextSlide">
+					<span class="medium">View more</span>
 					<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 					</svg>
 				</button>
 			</div>
 			<div class="col-two">
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Stephen Curry</h3>
 						<p class="medium">Manager</p>
 					</div>
 					<img src="/img/team/person-one.jpg">
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Lebron James</h3>
 						<p class="medium">Manager</p>
 					</div>
 					<img src="/img/team/person-two.jpg">
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Kevin Durant</h3>
 						<p class="medium">Manager</p>
 					</div>
 					<img src="/img/team/person-three.jpg">
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Kyrie Irving</h3>
 						<p class="medium">Manager</p>
 					</div>
 					<img src="/img/team/person-four.jpg">
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Stephen Curry</h3>
 						<p class="medium">Manager</p>
 					</div>
 					<img src="/img/team/person-five.jpg">
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Lebron James</h3>
 						<p class="medium">Manager</p>
 					</div>
 					<img src="/img/team/person-six.jpg">
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<div class="block-desc">
 						<h3>Kevin Durant</h3>
 						<p class="medium">Manager</p>
@@ -73,6 +73,16 @@
 	</section>
 
 </template>
+
+<script scoped>
+export default {
+	data() {
+    return {
+      nextSlide: false
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .our-team {
@@ -152,7 +162,29 @@
 		}
 		&-two {
 			display: flex;
-			overflow-x: auto;
+			overflow: hidden;
+			.block {
+				transform: translate3d(0%, 0px, 0px);
+				transition: .4s;
+				&.active {
+					transform: translate3d(-500%, 0px, 0px);
+					@media(min-width:576px) {
+						transform: translate3d(-394%, 0px, 0px);
+  				}
+					@media(min-width:768px) {
+						transform: translate3d(-295%, 0px, 0px);
+  				}
+					@media(min-width:992px) {
+						transform: translate3d(-437%, 0px, 0px);
+  				}
+					@media(min-width:1200px) {
+						transform: translate3d(-385%, 0px, 0px);
+  				}
+					@media(min-width:1440px) {
+						transform: translate3d(-307%, 0px, 0px);
+  				}
+				}
+			}
 		}
 	}
 }

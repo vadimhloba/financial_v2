@@ -6,6 +6,7 @@
 			<div class="column">
 				<div
 					class="item item-a animate__animated"
+					data-delay="100"
 					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>01</h2>
@@ -15,6 +16,7 @@
 				</div>
 				<div
 					class="item item-b animate__animated"
+					data-delay="200"
 					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>02</h2>
@@ -24,6 +26,7 @@
 				</div>
 				<div
 					class="item item-c animate__animated"
+					data-delay="300"
 					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>03</h2>
@@ -33,6 +36,7 @@
 				</div>
 				<div
 					class="item item-d animate__animated"
+					data-delay="400"
 					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>04</h2>
@@ -42,6 +46,7 @@
 				</div>
 				<div
 					class="item item-e animate__animated"
+					data-delay="500"
 					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>05</h2>
@@ -51,6 +56,7 @@
 				</div>
 				<div
 					class="item item-f animate__animated"
+					data-delay="600"
 					data-anim="fadeInUp">
 					<div class="wrapper">
 						<h2>06</h2>

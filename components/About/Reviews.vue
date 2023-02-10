@@ -4,15 +4,15 @@
 		<div class="container">
 			<div class="col-one">
 				<h1>Client review</h1>
-				<button class="next-review">
-					<p class="medium">Next review</p>
+				<button class="next-review" @click="nextSlide = !nextSlide">
+					<span class="medium">Next review</span>
 					<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 					</svg>
 				</button>
 			</div>
 			<div class="col-two">
-				<div class="block-tab">
+				<div class="block-tab" :class="{'active': nextSlide}">
 					<div class="box-tab">
 						<h3>Selena Giri</h3>
 						<p class="medium">CEO Chess.com</p>
@@ -30,7 +30,7 @@
 							<div
 								class="box animate__animated"
 								data-anim="fadeInRight"
-								data-delay="100"
+								data-delay="200"
 								data-parent="3">
 								<h1><span class="regular">$</span>200,500</h1>
 								<p class="medium">received to our clients</p>
@@ -38,7 +38,7 @@
 							<div
 								class="box animate__animated"
 								data-anim="fadeInRight"
-								data-delay="100"
+								data-delay="300"
 								data-parent="3">
 								<div>
 									<h1>4</h1>
@@ -52,7 +52,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="block-tab">
+				<div class="block-tab" :class="{'active': nextSlide}">
 					<div class="box-tab">
 						<h3>Luka Doncic</h3>
 						<p class="medium">Wilson.com</p>
@@ -86,6 +86,16 @@
 
 </template>
 
+<script scoped>
+export default {
+	data() {
+    return {
+      nextSlide: false
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .client-review {
 	padding-top: 80px;
@@ -100,9 +110,29 @@
 	}
 	.col-two {
 		display: flex;
-		overflow-x: auto;
+		overflow: hidden;
 		.block-tab {
 			margin-right: 32px;
+			transform: translate3d(0%, 0px, 0px);
+			transition: .4s;
+			&.active {
+				transform: translate3d(-108%, 0px, 0px);
+				@media(min-width:576px) {
+					transform: translate3d(-100%, 0px, 0px);
+  			}
+				@media(min-width:768px) {
+					transform: translate3d(-65%, 0px, 0px);
+  			}
+				@media(min-width:992px) {
+					transform: translate3d(-112%, 0px, 0px);
+  			}
+				@media(min-width:1200px) {
+					transform: translate3d(-94%, 0px, 0px);
+  			}
+				@media(min-width:1440px) {
+					transform: translate3d(-67%, 0px, 0px);
+  			}
+			}
 			&:last-child {
 				margin-right: 0;
 			}

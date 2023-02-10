@@ -6,8 +6,8 @@
 				<h1>Client review</h1>
 				<div class="link">
 					<div>
-						<button class="next-review">
-							<p class="medium">Next review</p>
+						<button class="next-review" @click="nextSlide = !nextSlide">
+							<span class="medium">Next review</span>
 							<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#DC5750"/>
 							</svg>
@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="col-two">
-				<div class="row-one">
+				<div class="row-one" :class="{'active': nextSlide}">
 					<div class="video">
 						<img src="/img/reviews/review-one.png">
 						<a><svg width="49" height="58" viewBox="0 0 49 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,21 +27,24 @@
 						<div
 							class="box animate__animated"
 							data-anim="fadeInRight"
-							data-delay="50">
+							data-parent="2"
+							data-delay="100">
 							<h3>Selena Giri</h3>
 							<p class="medium">CEO Chess.com</p>
 						</div>
 						<div
 							class="box animate__animated"
 							data-anim="fadeInRight"
-							data-delay="50">
+							data-parent="2"
+							data-delay="200">
 							<h1 class="cost"><span class="regular">$</span>200,500</h1>
 							<p class="medium">received to our clients</p>
 						</div>
 						<div
 							class="box animate__animated"
 							data-anim="fadeInRight"
-							data-delay="50">
+							data-parent="2"
+							data-delay="300">
 							<div>
 								<h1>4</h1>
 								<h2 class="regular">months</h2>
@@ -50,7 +53,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row-two">
+				<div class="row-two" :class="{'active': nextSlide}">
 					<div class="video">
 						<a>
 							<img src="/img/reviews/review-two.png">
@@ -84,6 +87,11 @@
 <script scoped>
 export default {
 	name: 'HomeReviews',
+	data() {
+    return {
+      nextSlide: false
+    }
+  }
 }
 </script>
 
@@ -111,13 +119,27 @@ export default {
 	}
 	.col-two {
 		display: flex;
-		overflow-x: auto;
+		overflow: hidden;
 		.row-one, .row-two {
 			min-width: 345px;
 			display: block;
 			overflow: hidden;
 			border-radius: 10px;
 			margin-right: 32px;
+			transform: translate3d(0%, 0px, 0px);
+			transition: .4s;
+			&.active {
+				transform: translate3d(-109%, 0px, 0px);
+				@media(min-width:576px) {
+					transform: translate3d(-53%, 0px, 0px);
+  			}
+				@media(min-width:768px) {
+					transform: translate3d(-97%, 0px, 0px);
+  			}
+				@media(min-width:992px) {
+					transform: translate3d(-67%, 0px, 0px);
+  			}
+			}
 			@media(min-width:768px) {
 				min-width: 654px;
   		}

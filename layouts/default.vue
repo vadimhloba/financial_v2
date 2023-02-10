@@ -5,6 +5,7 @@
     <Footer/>
 		<Quiz v-if="quiz"/>
 		<Thanks v-if="thanks"/>
+		<Navigation v-if="navigation"/>
   </main>
 </template>
 
@@ -21,7 +22,8 @@ export default{
   },
 	computed: {
 		quiz(){ return this.$store.getters.getQuiz },
-		thanks(){ return this.$store.getters.getThanks }
+		thanks(){ return this.$store.getters.getThanks },
+		navigation(){ return this.$store.getters.getNavigation }
 	}
 }
 </script>

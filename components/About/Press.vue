@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="col-one">
 				<h1>Press about us</h1>
-				<button class="read-more">
+				<button class="read-more" @click="nextSlide = !nextSlide">
 					<p class="medium">View more</p>
 					<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
@@ -12,61 +12,61 @@
 				</button>
 			</div>
 			<div class="col-two">
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<img src="/img/offices/office-one.jpg">
 					<p class="small">The Losangeles Tribune</p>
 					<h3>Financial Match Continues Industry-Leading National ERC Services Expansion</h3>
 					<p class="medium post">Financial Match has unique expertise in navigating the ERC (Employee Retention Credits) filing process, offering unparalleled access to ERC optimization and submission support for business owners across the country</p>
 					<button class="read-more">
-						<p class="medium">Read more</p>
+						<a class="medium" href="/erc" to="erc">Read more</a>
 						<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 						</svg>
 					</button>
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<img src="/img/offices/office-two.jpg">
 					<p class="small">Business First Online</p>
 					<h3>My CPA didn't tell me about ERC</h3>
 					<p class="medium post">Many businesses suffered as a result of the pandemic, whether due to supply chain issues, mandated operational limitations, or simply revenue reductions. ERC (Employee Retention Credits) was created as part of the Cares Act to help businesses overcome these challenges, recover, and continue operations</p>
 					<button class="read-more">
-						<p class="medium">Read more</p>
+						<a class="medium" href="/erc" to="erc">Read more</a>
 						<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 						</svg>
 					</button>
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<img src="/img/offices/office-three.jpg">
 					<p class="small">CEO Weekly</p>
 					<h3>Maximizes Your ERC Credits</h3>
 					<p class="medium post">ERC (Employee Retention Credits), part of the Cares Act, is widely misunderstood and not something many business owners know about. As an industry-leading government tax credit advisor</p>
 					<button class="read-more">
-						<p class="medium">Read more</p>
+						<a class="medium" href="/erc" to="erc">Read more</a>
 						<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 						</svg>
 					</button>
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<img src="/img/offices/office-four.jpg">
 					<p class="small">Disrupt Magazine</p>
 					<h3>Can I get both PPP and ERC?</h3>
 					<p class="medium post">The Cares Act was enacted to help individuals and businesses offset challenges experienced as a result of the pandemic. For businesses, these difficulties were due to supply chain disruptions, mandated operational limitations, or revenue reductions due to the economic calamity that resulted from COVID-19</p>
 					<button class="read-more">
-						<p class="medium">Read more</p>
+						<a class="medium" href="/erc" to="erc">Read more</a>
 						<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 						</svg>
 					</button>
 				</div>
-				<div class="block">
+				<div class="block" :class="{'active': nextSlide}">
 					<img src="/img/offices/office-five.jpg">
 					<p class="small">USA today</p>
 					<h3>Why choose Financial Match?</h3>
 					<p class="medium post">The Cares Act was enacted to help individuals and businesses offset challenges experienced as a result of the pandemic. For businesses, these difficulties were due to supply chain disruptions, mandated operational limitations, or revenue reductions due to the economic calamity that resulted from COVID-19</p>
 					<button class="read-more">
-						<p class="medium">Read more</p>
+						<a class="medium" href="/erc" to="erc">Read more</a>
 						<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6H8V2V8H6V3.2L2 8L0 6L4.8 2H0V0Z" fill="#41A280"/>
 						</svg>
@@ -77,6 +77,16 @@
 	</section>
 
 </template>
+
+<script scoped>
+export default {
+	data() {
+    return {
+      nextSlide: false
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .press-about-us {
@@ -91,12 +101,32 @@
 	}
 	.col-two {
 		display: flex;
-		overflow-x: auto;
+		overflow: hidden;
 		.block {
 			display: block;
 			min-width: 312px;
 			overflow: hidden;
 			margin-right: 32px;
+			transform: translate3d(0%, 0px, 0px);
+			transition: .4s;
+			&.active {
+				transform: translate3d(-420%, 0px, 0px);
+				@media(min-width:576px) {
+					transform: translate3d(-368%, 0px, 0px);
+  			}
+				@media(min-width:768px) {
+					transform: translate3d(-315%, 0px, 0px);
+  			}
+				@media(min-width:992px) {
+					transform: translate3d(-247%, 0px, 0px);
+  			}
+				@media(min-width:1200px) {
+					transform: translate3d(-190%, 0px, 0px);
+  			}
+				@media(min-width:1440px) {
+					transform: translate3d(-103%, 0px, 0px);
+  			}
+			}
 			&:last-child {
 				margin-right: 0;
 			}

@@ -5,22 +5,11 @@
       <img class="header__logo" src="/img/logo.svg">
 
 			<div class="header__column">
-				<button class="header__btn" @click.prevent="mobileNav = mobileNav ? false : true">
-					<svg v-if="!mobileNav" class="header__btn-open" width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<button class="header__btn" @click.prevent="$store.commit('setNavigation', true)">
+					<svg class="header__btn-open" width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect width="24" height="2" rx="1" fill="#0E0E11"/>
 						<rect y="4" width="24" height="2" rx="1" fill="#0E0E11"/>
 						<rect y="8" width="16" height="2" rx="1" fill="#0E0E11"/>
-					</svg>
-					<svg v-else class="header__btn-close" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_42_3815)">
-						<path d="M28.6668 19.333L19.3335 28.6663M19.3335 19.333L28.6668 28.6663" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</g>
-						<rect x="1" y="1" width="46" height="46" rx="23" stroke="#FAFAFA" stroke-width="2"/>
-						<defs>
-						<clipPath id="clip0_42_3815">
-						<rect width="16" height="16" fill="white" transform="translate(16 16)"/>
-						</clipPath>
-						</defs>
 					</svg>
 				</button>
 				<div class="header__links">
@@ -69,7 +58,7 @@ export default {
 	&__btn {
 		display: block;
     position: absolute;
-    z-index: 100;
+    z-index: 2;
     right: 0; top: 50%;
     transform: translateY(-50%);
 		@media (min-width: 768px) {

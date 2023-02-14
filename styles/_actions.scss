@@ -258,6 +258,37 @@
 		}
 	}
 }
+.back-main {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	svg {
+		margin-right: 4px;
+		transition: .2s;
+		& path {
+			fill: var(--white);
+		}
+	}
+	p, span, a {
+		color: var(--white);
+	}
+	&:hover {
+		svg {
+			transform: rotate(45deg);
+		}
+	}
+	&:focus {
+		text-decoration: underline var(--white);
+		svg {
+			transform: rotate(45deg);
+		}
+	}
+	&:active {
+		svg {
+			transform: rotate(45deg);
+		}
+	}
+}
 /* ------------------------
     END link "read-more"
 --------------------------- */
